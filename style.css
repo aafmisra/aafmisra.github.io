@@ -1,0 +1,205 @@
+body {
+  --main: #004643;
+  --secondary: #abd1c6;
+  --tertiary: #f9bc60;
+  --button-text: #001e1d;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: #fffffe;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex-shrink: 0;
+  padding: 20px;
+}
+
+footer a {
+    margin-right: 20px;
+    color: var(--button-text)
+}
+
+footer a:hover {
+    color: var(--secondary)
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 80px;
+  margin-bottom: 0;
+}
+
+.border {
+  content: ' ';
+  border-top: 6px dotted var(--tertiary);
+  width: 100%;
+  flex-shrink: 1;
+}
+
+h2 {
+  color: var(--secondary);
+}
+
+h3 {
+  flex-shrink: 0;
+  margin-right: 10px;
+  padding-left: 20px;
+}
+
+span {
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+span:hover {
+    color: var(--tertiary)
+}
+
+.mainHeading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* align-items: baseline; */
+  height: max-content;
+  padding: 20px 20px 0 20px;
+}
+
+.switcher {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li a {
+  display: block;
+  float: right;
+  width: 20px;
+  height: 20px;
+  margin: 0 15px 0 0;
+  border-radius: 100%;
+}
+
+.teal-button {
+  background-color: #004643;
+  border: 3px solid #f9bc60;
+}
+
+.blue-button {
+  background-color: #232946;
+  border: 3px solid #eebbc3;
+}
+
+.maroon-button {
+  background-color: #55423d;
+  border: 3px solid #ffc0ad;
+}
+
+.subheading {
+  margin-top: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+h3 {
+  margin-top: 0;
+}
+
+main {
+  background-color: var(--main);
+  padding-left: 20px;
+}
+
+.about {
+  display: none;
+}
+
+.projects {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+}
+
+.flashcardImage,
+.recipeImage {
+  width: 400px;
+  height: 219px;
+  background-image: url(images/Fieldwork-Flashcards-Shot.png);
+  background-size: contain;
+  background-position: center;
+  border-radius: 8px 8px 0 0;
+  margin-bottom: 0;
+}
+
+.recipeImage {
+  background-image: url(images/Rapid-Recipe-Shot.png);
+}
+
+.projectDetails {
+  width: 400px;
+  border-radius: 0 0 8px 8px;
+  margin-top: 0;
+  background-color: var(--secondary);
+  padding-bottom: 15px;
+}
+
+h4 {
+  margin: 0;
+  padding: 10px;
+}
+
+div.projectDetails p {
+  font-size: 14px;
+  margin: 0 10px 10px 10px;
+}
+
+div.projectDetails a {
+  text-decoration: none;
+  font-size: 12px;
+  background-color: var(--tertiary);
+  padding: 6px 8px;
+  margin: 10px;
+  color: #001e1d;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+body.teal {
+    --main: #004643;
+  --secondary: #abd1c6;
+  --tertiary: #f9bc60;
+  --button-text: #001e1d;
+}
+
+body.blue {
+    --main: #232946;
+  --secondary: #b8c1ec;
+  --tertiary: #eebbc3;
+  --button-text: #121629;
+}
+
+body.maroon {
+  --main: #55423d;
+  --secondary: #ffc0ad;
+  --tertiary: #e78fb3;
+  --button-text: #271c19;
+}
