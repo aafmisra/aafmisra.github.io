@@ -24,16 +24,19 @@ function changeColor(evt) {
 const pageSwitcher = document.querySelector('span');
 const projects = document.querySelector('.projects');
 const about = document.querySelector('.about');
+const subhead = document.querySelector('h2');
 
 pageSwitcher.addEventListener('click', switchPage);
 
 function switchPage() {
   if (pageSwitcher.textContent === 'About Me') {
     pageSwitcher.textContent = 'Projects';
+    subhead.textContent = '';
     projects.style.display = 'none';
     about.style.display = 'flex';
   } else {
     pageSwitcher.textContent = 'About Me';
+      subhead.textContent = 'Projects';
     projects.style.display = 'flex';
     about.style.display = 'none';
   }

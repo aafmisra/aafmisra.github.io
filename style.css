@@ -3,6 +3,7 @@ body {
   --secondary: #abd1c6;
   --tertiary: #f9bc60;
   --button-text: #001e1d;
+  --highlight: #e16162;
 }
 
 html,
@@ -28,17 +29,17 @@ footer {
 }
 
 footer a {
-    margin-right: 20px;
-    color: var(--button-text)
+  margin-right: 20px;
+  color: var(--button-text);
 }
 
 footer a:hover {
-    color: var(--secondary)
+  color: var(--secondary);
 }
 
 h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 80px;
+  font-size: 78px;
   margin-bottom: 0;
 }
 
@@ -66,7 +67,7 @@ span {
 }
 
 span:hover {
-    color: var(--tertiary)
+  color: var(--tertiary);
 }
 
 .mainHeading {
@@ -126,10 +127,6 @@ main {
   padding-left: 20px;
 }
 
-.about {
-  display: none;
-}
-
 .projects {
   display: flex;
   flex-direction: row;
@@ -138,6 +135,10 @@ main {
   margin-bottom: 20px;
 }
 
+article {
+  border-radius: 8px;
+  border: 2px dashed var(--highlight);
+}
 .flashcardImage,
 .recipeImage {
   width: 400px;
@@ -183,18 +184,73 @@ div.projectDetails a {
   letter-spacing: 1px;
 }
 
+.about {
+  display: flex;
+  flex-direction: column;
+  color: #fffffe;
+}
+
+.brand {
+  background-color: var(--secondary);
+  color: #000;
+  padding: 0 20px;
+  border-radius: 8px;
+  margin: 0 20px 20px 0;
+}
+
+.small {
+  width: 10%;
+}
+
+.fave-places {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.travelpic {
+  width: 150px;
+  height: 150px;
+}
+
+.australia {
+  background-image: url('/images/australia.png');
+  background-size: cover;
+  background-position: center;
+  margin: 5px;
+  border-radius: 6px;
+}
+
+.kenya {
+  background-image: url('/images/kenya.jpg');
+  background-size: cover;
+  background-position: center;
+  margin: 5px;
+  border-radius: 6px;
+}
+
+.grenada {
+  background-image: url('/images/grenada.jpg');
+  background-size: cover;
+  background-position: center;
+  margin: 5px;
+  border-radius: 6px;
+}
+
 body.teal {
-    --main: #004643;
+  --main: #004643;
   --secondary: #abd1c6;
   --tertiary: #f9bc60;
   --button-text: #001e1d;
+  --highlight: #e16162;
 }
 
 body.blue {
-    --main: #232946;
+  --main: #232946;
   --secondary: #b8c1ec;
   --tertiary: #eebbc3;
   --button-text: #121629;
+  --highlight: #eebbc3;
 }
 
 body.maroon {
@@ -202,4 +258,57 @@ body.maroon {
   --secondary: #ffc0ad;
   --tertiary: #e78fb3;
   --button-text: #271c19;
+  --highlight: #9656a1;
+}
+
+@media (max-width: 1000px) {
+  .mainHeading {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 500px) {
+  .subheading {
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 55px;
+  }
+
+  span {
+    margin: 10px 0;
+  }
+  h3 {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  h1 {
+    font-size: 50px;
+  }
+
+  .flashcardImage,
+  .recipeImage {
+    width: 350px;
+    height: 192px;
+  }
+
+  .projectDetails {
+    width: 350px;
+  }
+
+  article {
+    width: 350px;
+    margin: 10px auto;
+  }
+
+  .projects {
+    text-align: center;
+  }
+
+  div.projectDetails a {
+      font-size: 10px;
+  }
 }
