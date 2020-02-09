@@ -21,6 +21,8 @@ body {
 
 main {
   flex: 1 0 auto;
+  background-color: var(--main);
+  padding: 0 0 20px 20px;
 }
 
 footer {
@@ -79,6 +81,11 @@ span:hover {
   padding: 20px 20px 0 20px;
 }
 
+nav {
+  display: flex;
+  flex-direction: row;
+}
+
 .switcher {
   list-style: none;
   display: flex;
@@ -88,28 +95,30 @@ span:hover {
   overflow: hidden;
 }
 
-li a {
+ul.switcher li a {
   display: block;
-  float: right;
+  /* float: right; */
   width: 20px;
   height: 20px;
-  margin: 0 15px 0 0;
   border-radius: 100%;
 }
 
 .teal-button {
   background-color: #004643;
   border: 3px solid #f9bc60;
+  margin: 0 15px;
 }
 
 .blue-button {
   background-color: #232946;
   border: 3px solid #eebbc3;
+  margin: 0 15px 0 0;
 }
 
 .maroon-button {
   background-color: #55423d;
   border: 3px solid #ffc0ad;
+  margin: 0 15px 0 0;
 }
 
 .subheading {
@@ -122,10 +131,7 @@ h3 {
   margin-top: 0;
 }
 
-main {
-  background-color: var(--main);
-  padding-left: 20px;
-}
+
 
 .projects {
   display: flex;
@@ -172,7 +178,7 @@ div.projectDetails p {
   margin: 0 10px 10px 10px;
 }
 
-div.projectDetails a {
+div.projectDetails a, .button {
   text-decoration: none;
   font-size: 12px;
   background-color: var(--tertiary);
@@ -185,9 +191,13 @@ div.projectDetails a {
 }
 
 .about {
-  display: flex;
+  display: none;
   flex-direction: column;
   color: #fffffe;
+}
+
+div.about h3 {
+    margin-top: 20px;
 }
 
 .brand {
@@ -197,6 +207,15 @@ div.projectDetails a {
   border-radius: 8px;
   margin: 0 20px 20px 0;
 }
+
+ul.currently a li {
+    color: #fffffe;
+    text-decoration: underline;
+}
+
+ul.currently a li:hover {
+    color: var(--secondary);
+} 
 
 .small {
   width: 10%;
@@ -282,6 +301,23 @@ body.maroon {
   h3 {
     margin-top: 10px;
   }
+
+  nav {
+    justify-content: space-between;
+  }
+
+  main {
+      padding: 0 5px;
+  }
+
+  div.brand {
+      margin: 0;
+  }
+
+  .button {
+      display: block;
+      text-align: center;
+  }
 }
 
 @media (max-width: 400px) {
@@ -309,6 +345,6 @@ body.maroon {
   }
 
   div.projectDetails a {
-      font-size: 10px;
+    font-size: 10px;
   }
 }
