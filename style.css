@@ -144,9 +144,11 @@ h3 {
 article {
   border-radius: 8px;
   border: 2px dashed var(--highlight);
+  margin-bottom: 20px;
 }
+
 .flashcardImage,
-.recipeImage {
+.recipeImage, .baImage {
   width: 400px;
   height: 219px;
   background-image: url(images/Fieldwork-Flashcards-Shot.png);
@@ -158,6 +160,10 @@ article {
 
 .recipeImage {
   background-image: url(images/Rapid-Recipe-Shot.png);
+}
+
+.baImage {
+    background-image: url(images/BA-feed-shot.png);
 }
 
 .projectDetails {
@@ -326,7 +332,7 @@ body.maroon {
   }
 
   .flashcardImage,
-  .recipeImage {
+  .recipeImage, .baImage {
     width: 350px;
     height: 192px;
   }
