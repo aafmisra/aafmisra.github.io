@@ -148,7 +148,7 @@ article {
 }
 
 .flashcardImage,
-.recipeImage, .baImage {
+.recipeImage, .baImage, .bookBearImage {
   width: 400px;
   height: 219px;
   background-image: url(images/Fieldwork-Flashcards-Shot.png);
@@ -164,6 +164,10 @@ article {
 
 .baImage {
     background-image: url(images/BA-feed-shot.png);
+}
+
+.bookBearImage {
+  background-image: url(images/bookbear.png);
 }
 
 .projectDetails {
