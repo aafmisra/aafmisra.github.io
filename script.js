@@ -36,7 +36,7 @@ function switchPage() {
     about.style.display = 'flex';
   } else {
     pageSwitcher.textContent = 'About Me';
-      subhead.textContent = 'Projects';
+    subhead.textContent = 'Projects';
     projects.style.display = 'flex';
     about.style.display = 'none';
   }

@@ -131,8 +131,6 @@ h3 {
   margin-top: 0;
 }
 
-
-
 .projects {
   display: flex;
   flex-direction: row;
@@ -148,7 +146,10 @@ article {
 }
 
 .flashcardImage,
-.recipeImage, .baImage, .bookBearImage {
+.recipeImage,
+.baImage,
+.bookBearImage,
+.whatCheerImage {
   width: 400px;
   height: 219px;
   background-image: url(images/Fieldwork-Flashcards-Shot.png);
@@ -163,11 +164,15 @@ article {
 }
 
 .baImage {
-    background-image: url(images/BA-feed-shot.png);
+  background-image: url(images/BA-feed-shot.png);
 }
 
 .bookBearImage {
   background-image: url(images/bookbear.png);
+}
+
+.whatCheerImage {
+  background-image: url(images/whatcheer.png);
 }
 
 .projectDetails {
@@ -188,7 +193,8 @@ div.projectDetails p {
   margin: 0 10px 10px 10px;
 }
 
-div.projectDetails a, .button {
+div.projectDetails a,
+.button {
   text-decoration: none;
   font-size: 12px;
   background-color: var(--tertiary);
@@ -207,7 +213,7 @@ div.projectDetails a, .button {
 }
 
 div.about h3 {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .brand {
@@ -219,52 +225,26 @@ div.about h3 {
 }
 
 ul.currently a li {
-    color: #fffffe;
-    text-decoration: underline;
+  color: #fffffe;
+  text-decoration: underline;
 }
 
 ul.currently a li:hover {
-    color: var(--secondary);
-} 
-
-.small {
-  width: 10%;
+  color: var(--secondary);
 }
 
-.fave-places {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.travelpic {
+/* .travelpic {
   width: 150px;
   height: 150px;
-}
+} */
 
-.australia {
+/* .australia {
   background-image: url('/images/australia.png');
   background-size: cover;
   background-position: center;
   margin: 5px;
   border-radius: 6px;
-}
-
-.kenya {
-  background-image: url('/images/kenya.jpg');
-  background-size: cover;
-  background-position: center;
-  margin: 5px;
-  border-radius: 6px;
-}
-
-.grenada {
-  background-image: url('/images/grenada.jpg');
-  background-size: cover;
-  background-position: center;
-  margin: 5px;
-  border-radius: 6px;
-}
+} */
 
 body.teal {
   --main: #004643;
@@ -279,7 +259,7 @@ body.blue {
   --secondary: #b8c1ec;
   --tertiary: #eebbc3;
   --button-text: #121629;
-  --highlight: #FFE28A;
+  --highlight: #ffe28a;
 }
 
 body.maroon {
@@ -317,16 +297,16 @@ body.maroon {
   }
 
   main {
-      padding: 0 5px;
+    padding: 0 5px;
   }
 
   div.brand {
-      margin: 0;
+    margin: 0;
   }
 
   .button {
-      display: block;
-      text-align: center;
+    display: block;
+    text-align: center;
   }
 }
 
@@ -336,7 +316,8 @@ body.maroon {
   }
 
   .flashcardImage,
-  .recipeImage, .baImage {
+  .recipeImage,
+  .baImage {
     width: 350px;
     height: 192px;
   }
