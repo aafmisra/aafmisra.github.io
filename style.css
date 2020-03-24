@@ -63,12 +63,16 @@ h3 {
 }
 
 span {
+  font-weight: normal;
+}
+
+span.page-switch {
   font-size: 20px;
   font-weight: 700;
   cursor: pointer;
 }
 
-span:hover {
+span.page-switch:hover {
   color: var(--tertiary);
 }
 
@@ -285,7 +289,7 @@ body.maroon {
     font-size: 55px;
   }
 
-  span {
+  span.page-switch {
     margin: 10px 0;
   }
   h3 {
