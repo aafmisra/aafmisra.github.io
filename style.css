@@ -226,15 +226,26 @@ div.about h3 {
   padding: 0 20px;
   border-radius: 8px;
   margin: 0 20px 20px 0;
+  display: flex;
+  align-items: center;
 }
 
-ul.currently a li {
+.me {
+  width: 100px;
+  height: 100px;
+}
+
+ul.currently a li, p.contact a {
   color: #fffffe;
   text-decoration: underline;
 }
 
-ul.currently a li:hover {
+ul.currently a li:hover, p.contact a:hover {
   color: var(--secondary);
+}
+
+p.contact {
+  padding-left: 25px;
 }
 
 /* .travelpic {
@@ -287,6 +298,7 @@ body.maroon {
 
   h1 {
     font-size: 55px;
+    margin: 0;
   }
 
   span.page-switch {
