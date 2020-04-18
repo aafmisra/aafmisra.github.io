@@ -192,6 +192,18 @@ h4 {
   padding: 10px;
 }
 
+h3 a {
+  color: #fffffe;
+}
+
+h3 a:hover {
+  color: var(--secondary);
+}
+
+iframe {
+  border-radius: 8px;
+}
+
 div.projectDetails p {
   font-size: 14px;
   margin: 0 10px 10px 10px;
@@ -324,6 +336,10 @@ body.maroon {
     display: block;
     text-align: center;
   }
+
+  iframe.travel-map {
+    display: none;
+  }
 }
 
 @media (max-width: 400px) {
@@ -331,9 +347,11 @@ body.maroon {
     font-size: 50px;
   }
 
-  .flashcardImage,
-  .recipeImage,
-  .baImage {
+.flashcardImage,
+.recipeImage,
+.baImage,
+.bookBearImage,
+.whatCheerImage {
     width: 350px;
     height: 192px;
   }
@@ -353,5 +371,9 @@ body.maroon {
 
   div.projectDetails a {
     font-size: 10px;
+  }
+
+  iframe {
+    display: none;
   }
 }
