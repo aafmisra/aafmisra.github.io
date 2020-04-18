@@ -135,7 +135,7 @@ h3 {
   margin-top: 0;
 }
 
-.projects {
+.projects, .doodles {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -365,7 +365,7 @@ body.maroon {
     margin: 10px auto;
   }
 
-  .projects {
+  .projects, .doodles {
     text-align: center;
   }
 

@@ -23,21 +23,27 @@ function changeColor(evt) {
 
 const pageSwitcher = document.querySelector('span');
 const projects = document.querySelector('.projects');
+const doodles = document.querySelector('.doodles');
 const about = document.querySelector('.about');
-const subhead = document.querySelector('h2');
+const projectSubhead = document.querySelector('.projectHeading');
+const doodleSubhead = document.querySelector('.doodleHeading')
 
 pageSwitcher.addEventListener('click', switchPage);
 
 function switchPage() {
   if (pageSwitcher.textContent === 'About Me') {
     pageSwitcher.textContent = 'Projects';
-    subhead.textContent = '';
+    projectSubhead.textContent = '';
+    doodleSubhead.textContent = '';
     projects.style.display = 'none';
+    doodles.style.display = 'none';
     about.style.display = 'flex';
   } else {
     pageSwitcher.textContent = 'About Me';
-    subhead.textContent = 'Projects';
+    projectSubhead.textContent = 'Projects';
+    doodleSubhead.textContent = 'Doodles';
     projects.style.display = 'flex';
+    doodles.style.display = 'flex';
     about.style.display = 'none';
   }
 }
