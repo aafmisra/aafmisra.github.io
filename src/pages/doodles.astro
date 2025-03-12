@@ -4,6 +4,7 @@ import BoxBreathe from '../components/doodles/BoxBreathe.astro';
 import Chameleon from '../components/doodles/Chameleon.astro';
 import DoodleCard from '../components/doodles/DoodleCard.astro';
 import Sunrise from '../components/doodles/Sunrise.astro';
+import ColorSwitches from '../components/doodles/ColorSwitches.astro';
 ---
 
 <Base>
@@ -44,9 +45,15 @@ import Sunrise from '../components/doodles/Sunrise.astro';
 			<DoodleCard>
 				<figure>
 					<h2>Comic-Tabs-MS &#129313;</h2>
-					<figcaption class="caption">This Chrome extension turns the font in your active tab to <span id="comic-sans">Comic Sans MS</span> if you have too many tabs open in your browser window. I made this because I <span id="strikethrough">wanted to learn how to make a Chrome extension</span> have a problem with too many open tabs.</figcaption>
+					<figcaption class="caption">This Chrome extension turns the font in your active tab to <span id="comic-sans">Comic Sans MS</span> if you have too many tabs open in your browser window. I made this because I <span id="strikethrough">wanted to learn how to make a Chrome extension</span> have a problem with too many open tabs. <a href="https://github.com/aafmisra/comic-tabs-ms">Check it out on github!</a></figcaption>
 					<img src="/public/comic-tabs.png" alt="A screenshot of the Comic Tabs MS settings page with a circus themed background."/>
 				</figure>
+			</DoodleCard>
+		</li>
+
+		<li>
+			<DoodleCard>
+				<ColorSwitches/>
 			</DoodleCard>
 		</li>
 	</ul>

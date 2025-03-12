@@ -1,0 +1,85 @@
+---
+// teal:
+  // --main-color: #004643;
+  // --main-color-: #abd1c6;
+
+  // --contrast-light-color: #fffffe;
+  // --contrast-dark-color: #001e1d;
+
+  // --highlight-color: #f9bc60;
+  // --highlight-color-: #e16162;
+
+  // brown:
+  // --main-color: #55423d;
+  // --main-color-: #ffc0ad;
+
+  // --contrast-light-color: #fffffe;
+  // --contrast-dark-color: #271c19;
+
+  // --highlight-color: #e78fb3;
+  // --highlight-color-: #9656a1;
+
+  // og:
+  // --main-color: #232946;
+  // --main-color-: #b8c1ec;
+
+  // --contrast-light-color: #fffffe;
+  // --contrast-dark-color: #121629;
+
+  // --highlight-color: #ffaa01;
+  // --highlight-color-: #ff7900;
+
+  
+---
+
+<ul class="switcher">
+  <li>
+    <button class="teal-button" data-color="teal">
+      <span class="visually-hidden">click to change the color scheme of this page</span>
+    </button>
+  </li>
+  <li>
+    <button class="brown-button" data-color="brown">
+      <span class="visually-hidden">click to change the color scheme of this page</span>
+    </button>
+  </li>
+  <li>
+    <button class="black-button" data-color="black">
+      <span class="visually-hidden">click to change the color scheme of this page</span>
+    </button>
+  </li>
+</ul>
+
+<style>
+  .switcher {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+  }
+
+  ul.switcher li button {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+  }
+
+  .teal-button {
+    background-color: #004643;
+    border: 3px solid #f9bc60;
+    margin: 0 15px;
+  }
+
+  .brown-button {
+    background-color: #55423d;
+    border: 3px solid #e78fb3;
+    margin: 0 15px 0 0;
+  }
+
+  .black-button {
+    background-color: #16161a;
+    border: 3px solid #7f5af0;
+    margin: 0 15px 0 0;
+  }
+</style>
