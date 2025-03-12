@@ -1,0 +1,115 @@
+/* Custom vars */
+:root {
+  /* colors */
+  --main-color: #232946;
+  --main-color-: #b8c1ec;
+
+  --contrast-light-color: #fffffe;
+  --contrast-dark-color: #121629;
+
+  --highlight-color: #ffaa01;
+  --highlight-color-: #ff7900;
+}
+
+
+
+/* Layout */
+html {
+  background-color: var(--main-color);
+}
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Sono", sans-serif;
+  font-weight: 200;
+  max-width: 1600px;
+  animation: appear-on-load 0.5s ease-in-out;
+  animation-iteration-count: 1;
+}
+main {
+  flex: 1 0 auto;
+  padding: 1rem 2rem;
+  color: var(--contrast-light-color);
+}
+footer {
+  flex-shrink: 0;
+}
+
+/* Fade in */
+@keyframes appear-on-load {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Resets */
+ul {
+  list-style: none;
+}
+a {
+  color: var(--highlight-color-);
+  font-weight: 600;
+}
+
+/* Styled components */
+a.button-link {
+  height: min-content;
+  text-decoration: none;
+  color: var(--contrast-dark-color);
+  background-color: var(--highlight-color);
+  border-radius: 6px;
+  box-shadow: -4px 4px 0 0 var(--highlight-color-);
+  font-size: var(--px-to-rem-18);
+  font-weight: 700;
+  padding: var(--px-to-rem-12) var(--px-to-rem-18);
+  text-transform: lowercase;
+  letter-spacing: 1px;
+  transition: transform .25s, box-shadow .25s;
+}
+a.button-link:hover {
+  transform: translate(-4px, 4px);
+  box-shadow: 0 0 0 0 var(--highlight-color-);
+}
+
+h1, h2, h3 {
+  font-family: "DynaPuff", sans-serif;
+  font-weight: 400;
+  color: var(--main-color-);
+}
+h1 {
+  font-size: var(--px-to-rem-28);
+}
+h2 {
+  font-size: var(--px-to-rem-24);
+}
+h3 {
+  font-size: var(--px-to-rem-20);
+}
+h1 > span {
+  color: var(--highlight-color-);
+}
+
+p {
+  max-width: 60ch;
+  line-height: 1.25;
+}
+
+/* Utilities */
+/* 
+ * Hide content visually while keeping it screen reader-accessible.
+ */
+ .visually-hidden:not(:focus):not(:active) {
+  clip: rect(0 0 0 0); 
+  clip-path: inset(100%); 
+  height: 1px; 
+  overflow: hidden; 
+  position: absolute; 
+  white-space: nowrap; 
+  color: transparent;
+  width: 1px; 
+}

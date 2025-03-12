@@ -1,0 +1,176 @@
+---
+const currentPage = Astro.url.pathname;
+---
+
+<header>
+  <a href="#main-content" id="skip-link">Skip to main content</a>
+  <div>
+    <a href="/" id="hello"><span>Hello! My name is</span> Asha.</a>
+    <a class="button-link" href="mailto:aafmisra@gmail.com">Say Hi</a>
+  </div>
+
+  <nav aria-label="Primary">
+    <ul>
+      <li class={currentPage == "/" ? "active" : ""}>
+        <a aria-current={currentPage == "/"} href="/">About Me <span aria-hidden="true">&#128075;</span></a>
+      </li>
+      <li class={currentPage == "/projects" ? "active" : ""}>
+        <a aria-current={currentPage == "/projects"} href="/projects">Projects <span aria-hidden="true">&#128230;</span></a>
+      </li>
+      <li class={currentPage == "/doodles" ? "active" : ""}>
+        <a aria-current={currentPage == "/doodles"} href="/doodles">Doodles <span aria-hidden="true">&#128397;</span></a>
+      </li>
+      <li class={currentPage == "/components" ? "active" : ""}>
+        <a aria-current={currentPage == "/components"} href="/components">Components <span aria-hidden="true">&#129513;</span></a>
+      </li>
+      <li class={currentPage == "/thoughts" ? "active" : ""}>
+        <a aria-current={currentPage == "/thoughts"} href="/thoughts">Thoughts <span aria-hidden="true">&#128173;</span></a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<style>
+  header {
+    padding: 1rem 1rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: var(--contrast-dark-color);
+  }
+
+  header > div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  header a {
+    text-decoration: none;
+  }
+
+  a#hello {
+    font-family: DynaPuff;
+    font-size: var(--px-to-rem-48);
+    font-weight: 700;
+    color: var(--highlight-color);
+  }
+  a#hello > span {
+    color: var(--highlight-color-);
+  }
+
+  header > nav > ul {
+    width: 100%;
+    min-width: 900px;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    overflow-x: scroll;
+  } 
+
+  /* Skip to main content link */
+  a#skip-link {
+    background-color: var(--main-color);
+    border-bottom-right-radius: var(--px-to-rem-4);
+    color: var(--contrast-light-color);
+    font-size: var(--px-to-rem-20);
+    font-weight: 400;
+    height: unset;
+    left: 0;
+    padding: var(--px-to-rem-10) var(--px-to-rem-22);
+    position: absolute;
+    text-decoration: underline;
+    top: calc(var(--px-to-rem-50) * -1.2);
+    z-index: 9999;
+    transition: top 0 linear; /* Default transition: allow transition-delay for users who prefer reduced motion */
+    transition-delay: 2s;
+  }
+  
+  a#skip-link:focus {
+    top: 0;
+    transition: unset;
+  }
+  
+  a#skip-link:focus:not(:focus-visible) {
+    top: calc(var(--px-to-rem-50) * -1);
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    a#skip-link {
+      transition: top 0.25s ease-in-out;
+      transition-delay: 2s;
+    }
+  }
+  
+  /* Mobile mode */
+  @media (max-width: 900px) {
+    a#skip-link {
+      padding: var(--px-to-rem-8);
+      font-size: var(--px-to-rem-16)
+    }
+  }
+
+  /* overlapping tabs */
+  nav li {
+    display: inline-block;
+    border-bottom: 1px solid var(--main-color-);
+    margin-left: -20px;
+  }
+
+  nav a {
+    text-decoration: none;
+    font-weight: 400;
+    color: var(--contrast-dark-color);
+    background: var(--main-color-);
+    position: relative;
+    display: inline-block;
+    margin: 0 22px;
+    padding: var(--px-to-rem-8) var(--px-to-rem-18);
+    border-radius: 7px 7px 0 0; 
+    white-space: nowrap;
+  }
+
+  nav a:before,
+  nav a:after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    width: 23px;
+    height: 100%;
+    background-color: inherit;
+  }
+
+  nav a:before {
+    border-radius: 12px 0 0 0;
+    transform: skew(-24deg);
+    left: -13px; /* play with this one to give the LI border ~2px extrusion */
+  }
+
+  nav a:after {
+    border-radius: 0 12px 0 0;
+    transform: skew(24deg);
+    right: -13px; /* play with this one to give the LI border ~2px extrusion */
+    border-right: 1px solid var(--main-color);
+    z-index: 1; /* overlap next element */
+  }
+
+
+  /* LI ACTIVE  */
+
+  nav li.active {
+    border-bottom: 1px solid var(--main-color);
+  }
+
+  nav li.active a {
+    color: var(--main-color-);
+    background: var(--main-color);
+  }
+
+  nav li.active a:before {
+    z-index: 1; /* overlap prev element */
+  }
+
+  nav li.active a:after {
+    border-bottom: 1px solid var(--main-color);
+  }
+</style>

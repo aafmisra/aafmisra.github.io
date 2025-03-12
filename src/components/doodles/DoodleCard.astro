@@ -1,0 +1,46 @@
+---
+---
+
+{Astro.slots.has('default') &&
+  <div class="wrapper">
+    <div class="header" aria-hidden="true">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+
+    <div class="content">
+      <slot />
+    </div>
+  </div>
+}
+
+<style>
+  .wrapper {
+    border: 3px solid var(--main-color-);
+    border-radius: 8px;
+    padding: 0;
+    height: 100%;
+  }
+
+ .header {
+    height: var(--px-to-rem-48);
+    border-bottom: 3px solid var(--main-color-);
+    display: flex;
+    align-items: center;
+    gap: var(--px-to-rem-4);
+    padding: 0 0 0 var(--px-to-rem-12);
+  }
+
+  .circle {
+    height: 8px;
+    width: 8px;
+    border: 3px solid var(--main-color-);
+    border-radius: 100%;
+    background-color: var(--highlight-color-);
+  }
+
+  .content {
+    padding: var(--px-to-rem-16);
+  }
+</style>

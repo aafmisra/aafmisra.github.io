@@ -1,0 +1,90 @@
+---
+import Base from '../layouts/Base.astro';
+import BoxBreathe from '../components/doodles/BoxBreathe.astro';
+import Chameleon from '../components/doodles/Chameleon.astro';
+import DoodleCard from '../components/doodles/DoodleCard.astro';
+import Sunrise from '../components/doodles/Sunrise.astro';
+---
+
+<Base>
+	<h1>Just messin' around</h1>
+
+	<p>I learn best by doing, so I prefer to jump straight into a new technology or technique and learn as I go. These doodles are the result of that strategy.</p>
+
+	<ul aria-label="Doodles">
+		<li>
+			<DoodleCard>
+				<h2>SVG Sunrise</h2>
+				<figure>
+					<figcaption class="caption">I made this to learn about SVG animation.</figcaption>
+					<Sunrise/>
+				</figure>
+			</DoodleCard>
+		</li>
+
+		<li>
+			<DoodleCard>
+				<h2>Chameleon Camouflage</h2>
+				<p class="caption">I made this to learn about CSS transitions and animations. Click the chameleon's background to see him change!</p>
+				<Chameleon/>
+			</DoodleCard>
+		</li>
+
+		<li>
+			<DoodleCard>
+				<figure>
+					<h2>Box Breathe</h2>
+					<figcaption class="caption">I made this to help me take a deep breath.</figcaption>
+					<BoxBreathe/>
+				</figure>
+			</DoodleCard>
+		</li>
+
+		<li>
+			<DoodleCard>
+				<figure>
+					<h2>Comic-Tabs-MS &#129313;</h2>
+					<figcaption class="caption">This Chrome extension turns the font in your active tab to <span id="comic-sans">Comic Sans MS</span> if you have too many tabs open in your browser window. I made this because I <span id="strikethrough">wanted to learn how to make a Chrome extension</span> have a problem with too many open tabs.</figcaption>
+					<img src="/public/comic-tabs.png" alt="A screenshot of the Comic Tabs MS settings page with a circus themed background."/>
+				</figure>
+			</DoodleCard>
+		</li>
+	</ul>
+
+
+</Base>
+
+<style>
+	ul {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: stretch;
+		gap: var(--px-to-rem-32);
+		max-width: 100%;
+		padding: 0;
+	}
+	figure {
+		margin: 0;
+	}
+	.caption {
+		font-size: var(--px-to-rem-16);
+		margin: var(--px-to-rem-16) 0;
+	}
+
+	li {
+		width: calc(50% - var(--px-to-rem-16));
+
+		img {
+			max-width: 100%;
+		}
+	
+		span#comic-sans {
+			font-family: "Comic Sans MS";
+		}
+	
+		span#strikethrough {
+			text-decoration: line-through;
+		}
+	}
+</style>
