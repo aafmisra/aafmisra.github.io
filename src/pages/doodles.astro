@@ -15,29 +15,10 @@ import ColorSwitches from '../components/doodles/ColorSwitches.astro';
 	<ul aria-label="Doodles">
 		<li>
 			<DoodleCard>
-				<h2>SVG Sunrise</h2>
-				<figure>
-					<figcaption class="caption">I made this to learn about SVG animation.</figcaption>
-					<Sunrise/>
-				</figure>
-			</DoodleCard>
-		</li>
-
-		<li>
-			<DoodleCard>
-				<h2>Chameleon Camouflage</h2>
-				<p class="caption">I made this to learn about CSS transitions and animations. Click the chameleon's background to see him change!</p>
-				<Chameleon/>
-			</DoodleCard>
-		</li>
-
-		<li>
-			<DoodleCard>
-				<figure>
-					<h2>Box Breathe</h2>
-					<figcaption class="caption">I made this to help me take a deep breath.</figcaption>
-					<BoxBreathe/>
-				</figure>
+				<h2>Color Switches</h2>
+				<p>I made this when I first started learning JavaScript to figure out how event listeners work. I included it here because I'm indecisive about color schemes.</p>
+				<p>Click a button to change the colors of this page.</p>
+				<ColorSwitches/>
 			</DoodleCard>
 		</li>
 
@@ -53,7 +34,29 @@ import ColorSwitches from '../components/doodles/ColorSwitches.astro';
 
 		<li>
 			<DoodleCard>
-				<ColorSwitches/>
+				<h2>Chameleon Camouflage</h2>
+				<p class="caption">I made this to learn about CSS transitions and animations. Click the chameleon's background to see him change!</p>
+				<Chameleon/>
+			</DoodleCard>
+		</li>
+
+		<li>
+			<DoodleCard>
+				<h2>SVG Sunrise</h2>
+				<figure>
+					<figcaption class="caption">I made this to learn about SVG animation.</figcaption>
+					<Sunrise/>
+				</figure>
+			</DoodleCard>
+		</li>
+
+		<li>
+			<DoodleCard>
+				<figure>
+					<h2>Box Breathe</h2>
+					<figcaption class="caption">I made this to help me take a deep breath.</figcaption>
+					<BoxBreathe/>
+				</figure>
 			</DoodleCard>
 		</li>
 	</ul>

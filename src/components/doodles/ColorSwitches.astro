@@ -48,6 +48,11 @@
       <span class="visually-hidden">click to change the color scheme of this page</span>
     </button>
   </li>
+  <li>
+    <button class="navy-button" data-color="navy">
+      <span class="visually-hidden">click to change the color scheme of this page</span>
+    </button>
+  </li>
 </ul>
 
 <style>
@@ -59,27 +64,38 @@
     padding: 0;
   }
 
-  ul.switcher li button {
-    width: 20px;
-    height: 20px;
+  .switcher button {
+    width: 40px;
+    height: 40px;
     border-radius: 100%;
+    cursor: pointer;
+    transition: transform .25s ease-in-out;
+  }
+  .switcher button:hover {
+    transform: translateY(-4px);
   }
 
   .teal-button {
     background-color: #004643;
-    border: 3px solid #f9bc60;
+    border: 4px solid #f9bc60;
     margin: 0 15px;
   }
 
   .brown-button {
     background-color: #55423d;
-    border: 3px solid #e78fb3;
+    border: 4px solid #e78fb3;
     margin: 0 15px 0 0;
   }
 
   .black-button {
     background-color: #16161a;
-    border: 3px solid #7f5af0;
+    border: 4px solid #7f5af0;
+    margin: 0 15px 0 0;
+  }
+
+  .navy-button {
+    background-color: #232946;
+    border: 4px solid #ff7900;
     margin: 0 15px 0 0;
   }
 </style>

@@ -28,4 +28,11 @@ function changeColor(evt) {
     root.style.setProperty('--highlight-color', "#2cb67d");
     root.style.setProperty('--highlight-color-', "#7f5af0");
   }
+  else if (buttonColorClicked === 'navy') {
+    root.style.setProperty('--main-color', "#232946");
+    root.style.setProperty('--main-color-', "#b8c1ec");
+    root.style.setProperty('--contrast-dark-color', "#121629");
+    root.style.setProperty('--highlight-color', "#ffaa01");
+    root.style.setProperty('--highlight-color-', "#ff7900");
+  }
 }
