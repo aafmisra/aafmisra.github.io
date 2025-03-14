@@ -1,8 +1,12 @@
 ---
+const { fillMode = false } = Astro.props;
+
+let className = "wrapper";
+if (fillMode) {className += " filled"};
 ---
 
 {Astro.slots.has('default') &&
-  <div class="wrapper">
+  <div class={className}>
     <div class="header" aria-hidden="true">
       <div class="circle"></div>
       <div class="circle"></div>
@@ -21,6 +25,11 @@
     border-radius: 8px;
     padding: 0;
     height: 100%;
+  }
+
+  .wrapper.filled {
+    background-color: var(--contrast-dark-color);
+    z-index: 999;
   }
 
  .header {
