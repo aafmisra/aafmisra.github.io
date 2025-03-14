@@ -10,6 +10,8 @@ import Footer from "../components/global/Footer.astro";
 // CSS
 import "../styles/global.css";
 import "../styles/sizes.css";
+
+const { className = "" } = Astro.props;
 ---
 
 <!doctype html>
@@ -29,7 +31,7 @@ import "../styles/sizes.css";
 	<body>
 		<Header/>
 
-		<main id="main-content">
+		<main id="main-content" class={className}>
 			<slot />
 		</main>
 
