@@ -1,16 +1,134 @@
 ---
 import Base from '../layouts/Base.astro';
+
+const currentPage = Astro.url.pathname;
 ---
 
 <Base>
-	<h1>I'm an endlessly curious <span>frontend</span> dev, committed to building <span>accessible</span> UI/UX</h1>
+	<div>
+		<p id="hello"><img src="/starburst.svg" alt="" aria-hidden="true"/><span>Hello! My name is</span> Asha.</p>
+		<h1>I'm an endlessly curious <span>frontend</span> dev, committed to building <span>accessible</span> UI/UX <img src="/starburst-small.svg" alt="" aria-hidden="true"/></h1>
+	
+		<p>I have 5 years of experience on the front end, and I specialize in web accessibility.</p>
+	
+		<p>
+			I believe that the world, digital and physical, is better when we build it with all types of people in mind. I am committed to ensuring that everything I build is not only beautiful and performant, but above all, accessible to as many people as possible.
+		</p>
+	</div>
 
-	<p>I have 5 years of experience on the front end, and I specialize in web accessibility.</p>
+	<nav aria-label="Primary">
+    <ul>
+      <li class={currentPage == "/about" ? "active" : ""}>
+        <a aria-current={currentPage == "/"} href="/about">
+					<span>About Me</span> <img src="/about-home.svg" alt="" aria-hidden="true"/>
+				</a>
+      </li>
+      <li class={currentPage == "/projects" ? "active" : ""}>
+        <a aria-current={currentPage == "/projects"} href="/projects">
+					<span>Projects</span> <img src="/projects-home.svg" alt="" aria-hidden="true"/>
+				</a>
+      </li>
+      <li class={currentPage == "/doodles" ? "active" : ""}>
+        <a aria-current={currentPage == "/doodles"} href="/doodles">
+					<span>Doodles</span> <img src="/doodles-home.svg" alt="" aria-hidden="true"/>
+				</a>
+      </li>
+      <li class={currentPage == "/components" ? "active" : ""}>
+        <a aria-current={currentPage == "/components"} href="/components">
+					<span>Components</span> <img src="/components-home.svg" alt="" aria-hidden="true"/>
+				</a>
+      </li>
+      <li class={currentPage == "/thoughts" ? "active" : ""}>
+        <a aria-current={currentPage == "/thoughts"} href="/thoughts">
+					<span>Thoughts</span> <img src="/thoughts-home.svg" alt="" aria-hidden="true"/>
+				</a>
+      </li>
+    </ul>
+  </nav>
+	
 </Base>
 
 <style>
+	#hello {
+		font-family: DynaPuff;
+		font-size: var(--px-to-rem-56);
+		font-weight: 700;
+		color: var(--highlight-color);
+		margin-bottom: 0;
+		position: relative;
+	}
+	#hello > span {
+		color: var(--highlight-color-);
+	}
+	#hello > img {
+		height: 5rem;
+		transform: rotate(18deg);
+		position: absolute;
+		top: -2rem;
+		left: -5rem;
+	}
+
 	h1 {
 		font-size: var(--px-to-rem-60);
 		max-width: 24ch;
+		margin-top: 0;
+		position: relative;
+	}
+	h1 img {
+		height: 4rem;
+		transform: rotate(18deg);
+		position: absolute;
+		top: 8rem;
+		right: 4rem;
+	}
+
+	div {
+		padding-left: 6rem;
+	}
+
+	/* Nav links styling */
+	nav > ul{
+		display: flex;
+		gap: 1rem;
+		padding-left: 6rem;
+		margin: 2rem 0 0;
+	}
+	nav a {
+		text-decoration: none;
+		display: flex;
+		align-items: center;
+		height: 100%;
+	}
+
+	/* Nav link images */
+	nav a > img {
+		height: 1rem;
+		transition: transform .25s ease-in-out;
+	}
+	nav a:hover > img {
+		transform: translateY(-4px);
+	}
+	/* sizing for images */
+	nav a[href="/about"] > img {
+		height: 1.75rem;
+		margin-bottom: 8px;
+		margin-left: -2px;
+	}
+	nav a[href="/components"] > img {
+		height: 1.25rem;
+		margin-bottom: 6px;
+		margin-left: 2px;
+	}
+	nav a[href="/thoughts"] > img {
+		height: 1.75rem;
+		margin-bottom: 10px;
+	}
+	nav a[href="/doodles"] > img {
+		margin-bottom: 6px;
+		margin-left: 4px;
+	}
+	nav a[href="/projects"] > img {
+		margin-bottom: 6px;
+		margin-left: 6px;
 	}
 </style>

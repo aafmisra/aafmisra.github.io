@@ -1,30 +1,48 @@
 ---
 const currentPage = Astro.url.pathname;
+
+const className = currentPage === "/" ? "home" : "";
+
+const aboutActive = currentPage === "/about";
+const projectsActive = currentPage === "/projects";
+const doodlesActive = currentPage === "/doodles";
+const componentsActive = currentPage === "/components";
+const thoughtsActive = currentPage === "/thoughts";
 ---
 
-<header>
+<header class={className}>
   <a href="#main-content" id="skip-link">Skip to main content</a>
   <div>
-    <a href="/" id="hello"><span>Hello! My name is</span> Asha.</a>
+    <a href="/" title="home"><img src="/favicon.svg" alt="" aria-hidden="true"/><span class="visually-hidden">go to the home page</span></a>
     <a class="button-link" href="mailto:aafmisra@gmail.com">Say Hi</a>
   </div>
 
   <nav aria-label="Primary">
     <ul>
-      <li class={currentPage == "/" ? "active" : ""}>
-        <a aria-current={currentPage == "/"} href="/">About Me <span aria-hidden="true">&#128075;</span></a>
+      <li class={aboutActive ? "active" : ""}>
+        <a aria-current={aboutActive} href="/about">
+					<span>About Me <img src={`/about-${aboutActive ? "active" : "inactive"}.svg`} alt="" aria-hidden="true"/></span>
+				</a>
       </li>
-      <li class={currentPage == "/projects" ? "active" : ""}>
-        <a aria-current={currentPage == "/projects"} href="/projects">Projects <span aria-hidden="true">&#128230;</span></a>
+      <li class={projectsActive ? "active" : ""}>
+        <a aria-current={projectsActive} href="/projects">
+					<span>Projects <img src={`/projects-${projectsActive ? "active" : "inactive"}.svg`} alt="" aria-hidden="true"/></span>
+				</a>
       </li>
-      <li class={currentPage == "/doodles" ? "active" : ""}>
-        <a aria-current={currentPage == "/doodles"} href="/doodles">Doodles <span aria-hidden="true">&#128397;</span></a>
+      <li class={doodlesActive ? "active" : ""}>
+        <a aria-current={doodlesActive} href="/doodles">
+					<span>Doodles <img src={`/doodles-${doodlesActive ? "active" : "inactive"}.svg`} alt="" aria-hidden="true"/></span>
+				</a>
       </li>
-      <li class={currentPage == "/components" ? "active" : ""}>
-        <a aria-current={currentPage == "/components"} href="/components">Components <span aria-hidden="true">&#129513;</span></a>
+      <li class={componentsActive ? "active" : ""}>
+        <a aria-current={componentsActive} href="/components">
+					<span>Components <img src={`/components-${componentsActive ? "active" : "inactive"}.svg`} alt="" aria-hidden="true"/></span>
+				</a>
       </li>
-      <li class={currentPage == "/thoughts" ? "active" : ""}>
-        <a aria-current={currentPage == "/thoughts"} href="/thoughts">Thoughts <span aria-hidden="true">&#128173;</span></a>
+      <li class={thoughtsActive ? "active" : ""}>
+        <a aria-current={thoughtsActive} href="/thoughts">
+					<span>Thoughts <img src={`/thoughts-${thoughtsActive ? "active" : "inactive"}.svg`} alt="" aria-hidden="true"/></span>
+				</a>
       </li>
     </ul>
   </nav>
@@ -39,29 +57,35 @@ const currentPage = Astro.url.pathname;
     background-color: var(--contrast-dark-color);
   }
 
+  header.home {
+    background-color: var(--main-color);
+  }
+
+  header.home > nav,
+  header.home > div > a:first-of-type {
+    display: none;
+  }
+
+  header.home > div {
+    justify-content: flex-end;
+  }
+
   header > div {
     width: 100%;
     display: flex;
     justify-content: space-between;
   }
 
+  header > div img {
+    height: 3rem;
+  }
+
   header a {
     text-decoration: none;
   }
 
-  a#hello {
-    font-family: DynaPuff;
-    font-size: var(--px-to-rem-48);
-    font-weight: 700;
-    color: var(--highlight-color);
-  }
-  a#hello > span {
-    color: var(--highlight-color-);
-  }
-
   header > nav > ul {
     width: 100%;
-    min-width: 900px;
     display: flex;
     padding: 0 0 0 1rem;
     margin: 0;
@@ -154,6 +178,20 @@ const currentPage = Astro.url.pathname;
     z-index: 1; /* overlap next element */
   }
 
+  /* Nav link images */
+  nav a img {
+    height: 1rem;
+    transition: transform .25s ease-in-out;
+  }
+  nav a:hover img {
+    transform: translateY(-4px);
+  }
+  /* sizing for images */
+  nav a[href="/about"] img,
+  nav a[href="/thoughts"] img {
+    height: 1.2rem;
+    margin-bottom: -4px;
+  }
 
   /* LI ACTIVE  */
 

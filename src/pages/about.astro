@@ -1,0 +1,50 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base>
+  <div>
+    <section aria-labelledby="animals">
+      <h2 id="animals">I'm a huge animal nerd</h2>
+      
+      <p>
+        I studied Wildlife and Conservation Biology, and had a career in zoo and museum education in a past life.
+      </p>
+  
+      <img src="/public/amboseli.jpg" alt="Asha standing through the roof opening of a safari jeep looking at a herd of elephants in Amboseli National Park in Kenya." />
+    </section>
+  
+    <section aria-labelledby="fiber-art">
+      <h2 id="fiber-art">I'm a self-taught fiber artist</h2>
+      
+      <p>
+        Knitting and needlefelting are some of my favorite ways to pass the time. Making things for people is my love language, and felted pet portraits and nursery mobiles are some of my favorite things to make. <a href="mailto:aafmisra@gmail.com">Send me an email</a> if you'd like to commission something!
+      </p>
+  
+      <img src="/izzy2.gif" alt="A photo of a white dog curled up in a croissant shape that transitions to a photo of a needle felted portrait of the dog." />
+    </section>
+  </div>
+</Base>
+
+<style>
+  div {
+		width: 80%;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 2rem;
+		margin: 4rem auto 2rem;
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	img {
+		max-width: 100%;
+	}
+
+	section p {
+		margin: 0;
+	}
+</style>

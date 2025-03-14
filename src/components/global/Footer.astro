@@ -1,4 +1,10 @@
-<footer>
+---
+const currentPage = Astro.url.pathname;
+
+const className = currentPage === "/" ? "home" : "";
+---
+
+<footer class={className}>
   <p>
     Made with &hearts; by Asha Misra ©2025
   </p>
@@ -20,6 +26,10 @@
     justify-content: space-between;
     padding: 1rem 2rem;
     font-size: var(--px-to-rem-16);
+  }
+  
+  footer:not(.home) {
+    border-top: 6px dotted var(--highlight-color-);
   }
 
   p {

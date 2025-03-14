@@ -86,7 +86,7 @@ h1 {
 }
 h2 {
   font-size: var(--px-to-rem-24);
-  margin-top: 0;
+  margin: 0;
 }
 h3 {
   font-size: var(--px-to-rem-20);
@@ -96,7 +96,7 @@ h1 > span {
 }
 
 p {
-  max-width: 60ch;
+  max-width: 80ch;
   line-height: 1.25;
 }
 
