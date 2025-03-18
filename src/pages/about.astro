@@ -3,13 +3,13 @@ import Base from '../layouts/Base.astro';
 import DoodleCard from '../components/doodles/DoodleCard.astro';
 ---
 <Base className="about">
-  <div>
+  <div class="single-photo">
     <DoodleCard fillMode>
-      <h1>A bit about me</h1>
-      
-      <ul>
-        <li>I live in Lawrence, Massachusetts <img src="/lawrence-flag.svg" alt="Flag of Lawrence, Massachusetts. It has a light blue background and three intersecting white lines representing the convergence of the Merrimack, Shawsheen, and Spicket rivers." /></li>
-      </ul>
+      <h1>Hi! I'm Asha 👋🏼</h1>
+
+      <p>I'm a frontend developer with 5 years experience on a wonderful team at a web design and development agency working with many diverse clients. Being on a small team meant that I was writing production code from day 1. Eventually I gained enough experience to plan <a href="/projects">projects</a> from the design stage and lead their development. Along the way I specialized in web accessibility, acting as a resource for my co-workers during development of new projects and performing accessibility audits and remediation on existing sites.</p>
+
+      <p>I'm currently seeking a new role where I can use my creativity and attention to detail to build software that enriches peoples' lives. I'm adept at CSS and I love a difficult design challenge such as a complex layout. My background in zoo & museum exhibit development gave me an invaluable developer skill — putting myself in the user's shoes. I apply this skill every day to make elegant, efficient, effective, and above all accessible products. <a href="mailto:aafmisra@gmail.com">Drop me a line if you'd like to work together!</a></p>
     </DoodleCard>
   
     <img src="/me.webp" alt="Asha smiling at a scenic overlook on the White Mountain Highway in North Conway, New Hampshire." />
@@ -25,6 +25,7 @@ import DoodleCard from '../components/doodles/DoodleCard.astro';
     </DoodleCard>
 
     <img src="/public/amboseli.jpg" alt="Asha standing through the roof opening of a safari jeep looking at a herd of elephants in Amboseli National Park in Kenya." />
+    <img src="/public/salamander.jpg" alt="Asha in a green raincoat holding a yellow spotted salamander somewhere in Rhode Island." />
   </div>
   
   <div>
@@ -32,39 +33,92 @@ import DoodleCard from '../components/doodles/DoodleCard.astro';
       <h2 id="fiber-art">I'm a self-taught fiber artist</h2>
       
       <p>
-        Knitting and needlefelting are some of my favorite ways to pass the time. Making things for people is my love language, and felted pet portraits and nursery mobiles are some of my favorite things to make. <a href="mailto:aafmisra@gmail.com">Send me an email</a> if you'd like to commission something!
+        Knitting and needlefelting are some of my favorite ways to pass the time. Making things for people is my love language, and felted pet portraits and nursery mobiles are my favorite things to make. <a href="mailto:aafmisra@gmail.com">Send me an email</a> if you'd like to commission something!
       </p>
     </DoodleCard>
 
-    <img src="/izzy2.gif" alt="A photo of a white dog curled up in a croissant shape that transitions to a photo of a needle felted portrait of the dog." />
+    <img src="/public/jolene.jpg" alt="A needle felted portrait of a scruffy black dog named Jolene on a blue background." />
+    <img src="/mobile.jpg" alt="A needle felted mobile for a baby's nursery. It has shooting stars, clouds, and sheep hanging from it." />
   </div>
 
-  <img id="me" src="/public/me-eyes-closed.webp" alt="Asha with her eyes closed smiling at a scenic overlook on the White Mountain Highway in North Conway, New Hampshire." />
+  <div class="single-photo">
+    <DoodleCard fillMode>
+      <h2>A bit more about me...</h2>
+
+      <ul>
+        <li>I live in Lawrence, Massachusetts <img src="/lawrence-flag.svg" alt="Flag of Lawrence, Massachusetts. It has a light blue background and three intersecting white lines representing the convergence of the Merrimack, Shawsheen, and Spicket rivers." /></li>
+        <li>I'm a URI alum and a Rhode Islander at heart ⚓︎</li>
+      </ul>
+    </DoodleCard>
+  
+    <img src="/me-eyes-closed.webp" alt="Asha with her eyes closed smiling at a scenic overlook on the White Mountain Highway in North Conway, New Hampshire." />
+  </div>
+
 </Base>
 
 <style>
   :global(main.about) {
     padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  :global(main.about div.wrapper) {
+    height: min-content;
+  }
+
+  div > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+	}
+
+  /* 2-photo sections */
+  div:not(.single-photo) {
     display: grid;
-    grid-template-rows: 40rem repeat(3, 30rem);
+		grid-template-columns: 1fr 11rem 11rem 1fr;
+    grid-template-rows: 1fr auto 1fr;
+  }
+  :global(main.about > div:not(.single-photo) div.wrapper) {
+    grid-row: 2 / span 1;
+    grid-column: 2 / span 2;
+  }
+  :global(main.about > div:not(.single-photo) img:first-of-type) {
+    grid-row: 1 / span 3;
+    grid-column: 1 / span 2;
+  }
+  :global(main.about > div:not(.single-photo) img:last-of-type) {
+    grid-row: 1 / span 3;
+    grid-column: 3 / span 2;
   }
   
-  div {
+  /* Single photo sections */
+  div.single-photo {
     display: grid;
 		grid-template-columns: 1fr 4rem 1fr;
-    grid-template-rows: 1fr auto 1fr;
+    grid-template-rows: 2rem 1fr auto 1fr 2rem; /* add set-size buffers at top and bottom so div can grow without touching top and bottom edges of container - 1fr sections shrink as needed */
 	}
-  
-  :global(main.about div.wrapper) {
-    grid-column: 2 / span 2;
-    grid-row: 2 / span 1;
-    height: min-content;
-    margin-right: 2rem;
+  :global(main.about > div.single-photo div.wrapper) {
+    grid-row: 3 / span 1;
   }
-  :global(main.about > div:nth-of-type(odd) div.wrapper) {
+  :global(main.about > div.single-photo > img) {
+    grid-row: 1 / span 5;
+  }
+  :global(main.about > div.single-photo:first-of-type div.wrapper) {
     grid-column: 1 / span 2;
     margin-left: 2rem;
   }
+  :global(main.about > div.single-photo:first-of-type > img) {
+    grid-column: 2 / span 2;
+  }
+  :global(main.about > div.single-photo:last-of-type div.wrapper) {
+    grid-column: 2 / span 2;
+    margin-right: 2rem;
+  }
+  :global(main.about > div.single-photo:last-of-type > img) {
+    grid-column: 1 / span 2;
+  } 
 
   ul {
     list-style: disc;
@@ -76,26 +130,4 @@ import DoodleCard from '../components/doodles/DoodleCard.astro';
   li > img {
     height: 1rem;
   }
-  
-	div > img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    grid-column: 1 / span 2;
-    grid-row: 1 / span 3;
-    z-index: 1;
-	}
-  div:nth-of-type(odd) > img {
-    grid-column: 2 / span 2;
-  }
-  img#me {
-    width: 50%;
-    grid-column: unset;
-    grid-row: unset;
-    margin: 0 auto;
-  }
-
-	section p {
-		margin: 0;
-	}
 </style>
