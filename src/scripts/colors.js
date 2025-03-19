@@ -1,8 +1,12 @@
 const colorSwitcher = document.querySelector('.switcher');
 const root = document.documentElement;
 
-colorSwitcher.addEventListener('click', changeColor);
+// Only run if we're on the page with the color switcher
+if (colorSwitcher) {
+  colorSwitcher.addEventListener('click', changeColor);
+}
 
+// Change custom CSS cars based on which button was clicked
 function changeColor(evt) {
   const buttonColorClicked = evt.target.dataset.color;
 
