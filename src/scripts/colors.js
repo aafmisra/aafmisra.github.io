@@ -5,7 +5,6 @@ colorSwitcher.addEventListener('click', changeColor);
 
 function changeColor(evt) {
   const buttonColorClicked = evt.target.dataset.color;
-  console.log(buttonColorClicked)
 
   if (buttonColorClicked === 'teal') {
     root.style.setProperty('--main-color', "#004643");
