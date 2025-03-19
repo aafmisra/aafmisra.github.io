@@ -33,7 +33,7 @@ import DoodleCard from '../components/doodles/DoodleCard.astro';
       <h2 id="fiber-art">I'm a self-taught fiber artist</h2>
       
       <p>
-        Knitting and needlefelting are some of my favorite ways to pass the time. Making things for people is my love language, and felted pet portraits and nursery mobiles are my favorite things to make. <a href="mailto:aafmisra@gmail.com">Send me an email</a> if you'd like to commission something!
+        Knitting and needlefelting are some of my favorite ways to pass the time. Making things for people is my love language, and felted pet portraits and nursery mobiles are my favorite things to make. Check out my (rarely updated) <a href="https://www.instagram.com/heartfelt_fiber_art">instagram account</a>, and DM me there or <a href="mailto:aafmisra@gmail.com">send me an email</a> if you'd like to commission something!
       </p>
     </DoodleCard>
 
@@ -48,6 +48,22 @@ import DoodleCard from '../components/doodles/DoodleCard.astro';
       <ul>
         <li>I live in Lawrence, Massachusetts <img src="/lawrence-flag.svg" alt="Flag of Lawrence, Massachusetts. It has a light blue background and three intersecting white lines representing the convergence of the Merrimack, Shawsheen, and Spicket rivers." /></li>
         <li>I'm a URI alum and a Rhode Islander at heart ⚓︎</li>
+        <li>I will talk your ear off about any of these things:
+          <ul>
+            <li>Bizarre animals 🐢</li>
+            <li>Niche museums 🏤</li>
+            <li>Houseplants and how to (maybe) not kill them 🌱</li>
+            <li>Accessibility issues, physical and digital ♿️</li>
+            <li>Progressive hereditary demyelinating peripheral neuropathy 🦶</li>
+            <li>Finding the perfect chocolate chip cookie 🍪</li>
+            <li>The best dog names 🐕</li>
+            <li>Indian street food 🇮🇳</li>
+            <li>Movies !!! 🎥</li>
+            <li>Knitting and needle felting 👵</li>
+            <li>Mid-century design 🛋️</li>
+            <li>The Beatles 🎸</li>
+          </ul>
+        </li>
       </ul>
     </DoodleCard>
   
@@ -97,7 +113,7 @@ import DoodleCard from '../components/doodles/DoodleCard.astro';
   div.single-photo {
     display: grid;
 		grid-template-columns: 1fr 4rem 1fr;
-    grid-template-rows: 2rem 1fr auto 1fr 2rem; /* add set-size buffers at top and bottom so div can grow without touching top and bottom edges of container - 1fr sections shrink as needed */
+    grid-template-rows: 2rem 1fr auto 1fr 2rem; /* add set-size vertical buffers so div can grow without touching vertical edges of container - 1fr sections shrink as needed and keep div centered */
 	}
   :global(main.about > div.single-photo div.wrapper) {
     grid-row: 3 / span 1;
@@ -124,7 +140,7 @@ import DoodleCard from '../components/doodles/DoodleCard.astro';
     list-style: disc;
   }
   li::marker {
-    color: var(--highlight-color-);
+    color: var(--highlight-color);
   }
 
   li > img {
