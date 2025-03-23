@@ -37,22 +37,22 @@ import Card from '../components/generic/Card.astro';
       </p>
     </Card>
 
-    <img src="/public/jolene.jpg" alt="A needle felted portrait of a scruffy black dog named Jolene on a blue background." />
+    <img src="/jolene.jpg" alt="A needle felted portrait of a scruffy black dog named Jolene on a blue background." />
     <img src="/mobile.jpg" alt="A needle felted mobile for a baby's nursery. It has shooting stars, clouds, and sheep hanging from it." />
   </div>
 
   <div class="single-photo">
     <Card fillMode>
-      <h2>A bit more about me...</h2>
+      <h2 id="more-about-me">A bit more about me...</h2>
 
-      <ul>
+      <ul aria-labelledby="more-about-me">
         <li>I live in Lawrence, Massachusetts <img src="/lawrence-flag.svg" alt="Flag of Lawrence, Massachusetts. It has a light blue background and three intersecting white lines representing the convergence of the Merrimack, Shawsheen, and Spicket rivers." /></li>
         <li>I'm a URI alum and a Rhode Islander at heart ⚓︎</li>
-        <li>I will talk your ear off about any of these things:
+        <li>
+          I will talk your ear off about any of these things:
           <ul>
             <li>Bizarre animals 🐢</li>
             <li>Niche museums 🏤</li>
-            <li>Houseplants and how to (maybe) not kill them 🌱</li>
             <li>Accessibility issues, physical and digital ♿️</li>
             <li>Progressive hereditary demyelinating peripheral neuropathy 🦶</li>
             <li>Finding the perfect chocolate chip cookie 🍪</li>
@@ -62,6 +62,16 @@ import Card from '../components/generic/Card.astro';
             <li>Knitting and needle felting 👵</li>
             <li>Mid-century design 🛋️</li>
             <li>The Beatles 🎸</li>
+          </ul>
+        </li>
+        <li>
+          Currently I am...
+          <ul>
+            <li>Scheming about how to replace my grass lawn with something better</li>
+            <li>Dreaming up my first backyard garden</li>
+            <li>Trying to keep up with my 3-year-old niece</li>
+            <li>Looking forward to my little brother's wedding</li>
+            <li>Thinking of ways I can keep my community safe</li>
           </ul>
         </li>
       </ul>
