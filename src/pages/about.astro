@@ -58,8 +58,8 @@ import Card from '../components/generic/Card.astro';
             <li>Finding the perfect chocolate chip cookie 🍪</li>
             <li>The best dog names 🐕</li>
             <li>Indian street food 🇮🇳</li>
-            <li>Movies !!! 🎥</li>
-            <li>Knitting and needle felting 👵</li>
+            <li>Movies 🎥 (especially Ghibli, Wes Anderson, LotR, and anything based on Jane Austen)</li>
+            <li>Knitting and needle felting 👵🏼</li>
             <li>Mid-century design 🛋️</li>
             <li>The Beatles 🎸</li>
           </ul>
@@ -67,11 +67,11 @@ import Card from '../components/generic/Card.astro';
         <li>
           Currently I am...
           <ul>
-            <li>Scheming about how to replace my grass lawn with something better</li>
-            <li>Dreaming up my first backyard garden</li>
+            <li>Scheming about how to replace my grass lawn with something better 🌼</li>
+            <li>Dreaming up my first backyard garden 🥕</li>
             <li>Trying to keep up with my 3-year-old niece</li>
-            <li>Looking forward to my little brother's wedding</li>
-            <li>Thinking of ways I can keep my community safe</li>
+            <li>Looking forward to my little brother's wedding 💃🏻</li>
+            <li>Organizing to keep my community safe</li>
           </ul>
         </li>
       </ul>
@@ -89,7 +89,7 @@ import Card from '../components/generic/Card.astro';
     flex-direction: column;
   }
 
-  :global(main.about div.wrapper) {
+  :global(main.about div.card) {
     height: min-content;
   }
 
@@ -106,7 +106,7 @@ import Card from '../components/generic/Card.astro';
 		grid-template-columns: 1fr 11rem 11rem 1fr;
     grid-template-rows: 1fr auto 1fr;
   }
-  :global(main.about > div:not(.single-photo) div.wrapper) {
+  :global(main.about > div:not(.single-photo) div.card) {
     grid-row: 2 / span 1;
     grid-column: 2 / span 2;
   }
@@ -125,20 +125,20 @@ import Card from '../components/generic/Card.astro';
 		grid-template-columns: 1fr 4rem 1fr;
     grid-template-rows: 2rem 1fr auto 1fr 2rem; /* add set-size vertical buffers so div can grow without touching vertical edges of container - 1fr sections shrink as needed and keep div centered */
 	}
-  :global(main.about > div.single-photo div.wrapper) {
+  :global(main.about > div.single-photo div.card) {
     grid-row: 3 / span 1;
   }
   :global(main.about > div.single-photo > img) {
     grid-row: 1 / span 5;
   }
-  :global(main.about > div.single-photo:first-of-type div.wrapper) {
+  :global(main.about > div.single-photo:first-of-type div.card) {
     grid-column: 1 / span 2;
     margin-left: 2rem;
   }
   :global(main.about > div.single-photo:first-of-type > img) {
     grid-column: 2 / span 2;
   }
-  :global(main.about > div.single-photo:last-of-type div.wrapper) {
+  :global(main.about > div.single-photo:last-of-type div.card) {
     grid-column: 2 / span 2;
     margin-right: 2rem;
   }
@@ -150,7 +150,7 @@ import Card from '../components/generic/Card.astro';
     list-style: disc;
   }
   li::marker {
-    color: var(--highlight-color);
+    color: var(--highlight-color-);
   }
 
   li > img {
