@@ -55,6 +55,9 @@ a {
   color: var(--highlight-color-);
   font-weight: 600;
 }
+a:not(.button-link):hover {
+  color: var(--highlight-color);
+}
 
 /* Styled components */
 a.button-link {
@@ -78,18 +81,19 @@ a.button-link:hover {
 
 h1, h2, h3 {
   font-family: "DynaPuff", sans-serif;
-  font-weight: 400;
+  font-weight: 600;
   color: var(--main-color-);
 }
 h1 {
-  font-size: var(--px-to-rem-28);
+  font-size: var(--px-to-rem-32);
 }
 h2 {
-  font-size: var(--px-to-rem-24);
+  color: var(--highlight-color);
+  font-size: var(--px-to-rem-28);
   margin: 0;
 }
 h3 {
-  font-size: var(--px-to-rem-20);
+  font-size: var(--px-to-rem-24);
 }
 h1 > span {
   color: var(--highlight-color-);

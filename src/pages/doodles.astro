@@ -16,8 +16,8 @@ import ColorSwitches from '../components/doodles/ColorSwitches.astro';
 		<li>
 			<Card>
 				<h2>Color Switches</h2>
-				<p>I made this when I first started learning JavaScript to figure out how event propagation works. I included it here because I'm indecisive about color schemes.</p>
-				<p>Click a button to change the colors of this page.</p>
+				<p class="caption">I made this when I first started learning JavaScript to figure out how event propagation works. I included it here because I'm indecisive about color schemes.</p>
+				<p class="caption">Click a button to change the colors of this page.</p>
 				<ColorSwitches/>
 			</Card>
 		</li>
@@ -77,8 +77,11 @@ import ColorSwitches from '../components/doodles/ColorSwitches.astro';
 	figure {
 		margin: 0;
 	}
+	figure > img {
+		border-radius: 8px;
+	}
 	.caption {
-		font-size: var(--px-to-rem-16);
+		font-size: var(--px-to-rem-18);
 		margin: var(--px-to-rem-16) 0;
 	}
 

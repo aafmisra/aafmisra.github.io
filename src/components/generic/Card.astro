@@ -1,7 +1,7 @@
 ---
 const { fillMode = false } = Astro.props;
 
-let className = "wrapper";
+let className = "card";
 if (fillMode) {className += " filled"};
 ---
 
@@ -20,14 +20,14 @@ if (fillMode) {className += " filled"};
 }
 
 <style>
-  .wrapper {
+  .card {
     border: 3px solid var(--main-color-);
     border-radius: 8px;
     padding: 0;
     height: 100%;
   }
 
-  .wrapper.filled {
+  .card.filled {
     background-color: var(--contrast-dark-color);
     z-index: 999;
   }
@@ -51,5 +51,9 @@ if (fillMode) {className += " filled"};
 
   .content {
     padding: var(--px-to-rem-16);
+  }
+
+  :global(.card .content > img) {
+    width: 100%;
   }
 </style>

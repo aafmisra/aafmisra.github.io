@@ -73,6 +73,7 @@ const currentPage = Astro.url.pathname;
 		max-width: 24ch;
 		margin-top: 0;
 		position: relative;
+		font-weight: 400;
 	}
 	h1 img {
 		height: 4rem;
@@ -96,8 +97,12 @@ const currentPage = Astro.url.pathname;
 	nav a {
 		text-decoration: none;
 		display: flex;
+		flex-direction: column-reverse;
 		align-items: center;
 		height: 100%;
+	}
+	nav a:hover {
+		color: var(--highlight-color-); /* counteract global style */
 	}
 
 	/* Nav link images */
@@ -111,24 +116,22 @@ const currentPage = Astro.url.pathname;
 	/* sizing for images */
 	nav a[href="/about"] > img {
 		height: 1.75rem;
-		margin-bottom: 8px;
-		margin-left: -2px;
+		/* margin-left: -2px; */
 	}
 	nav a[href="/components"] > img {
 		height: 1.25rem;
 		margin-bottom: 6px;
-		margin-left: 2px;
+		/* margin-left: 2px; */
 	}
 	nav a[href="/thoughts"] > img {
 		height: 1.75rem;
-		margin-bottom: 10px;
 	}
 	nav a[href="/doodles"] > img {
 		margin-bottom: 6px;
-		margin-left: 4px;
+		/* margin-left: 4px; */
 	}
 	nav a[href="/projects"] > img {
 		margin-bottom: 6px;
-		margin-left: 6px;
+		/* margin-left: 6px; */
 	}
 </style>
