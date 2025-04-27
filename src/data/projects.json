@@ -1,17 +1,5 @@
 [
   {
-    "name": "MIT AgeLab",
-    "type": "Website",
-    "year": "2021",
-    "stack": "11ty (Eleventy), Nunjucks, Netlify CMS",
-    "role": "Developer",
-    "highlights": "This might be an unpopular opinion, but I really like working with templating languages!",
-    "image": "/agelab.webp",
-    "imageAlt": "The landing page of the MIT age lab site.",
-    "url": "agelab.mit.edu",
-    "href": "https://agelab.mit.edu/"
-  },
-  {
     "name": "Neutrogena Skin360",
     "type": "Web app",
     "year": "2020 - 2025",
@@ -29,45 +17,47 @@
     "year": "2023",
     "stack": "Astro, React components, Storybook for component development and testing, Netlify CMS",
     "role": "Developer",
-    "highlights": "Working with a big global NGO felt really impactful.",
+    "highlights": "Working with a big global NGO felt really impactful. They are doing such important work, and I was so happy to be a small part of it.",
     "image": "/concern.webp",
     "imageAlt": "The landing page of the Concern Worldwide US website.",
     "url": "concernusa.org",
     "href": "https://concernusa.org/"
   },
   {
-    "name": "Grafton Studio",
+    "name": "Concern Worldwide USA - Beyond Barriers",
     "type": "Website",
-    "year": "2023",
-    "stack": "Astro, React components, Storybook for component development and testing, Sanity CMS",
+    "year": "2024",
+    "stack": "Astro, React components, Storybook for component development and testing, Google charts for data visualization, Netlify CMS",
     "role": "Planner, Lead Developer",
-    "highlights": "This was the first project I took the lead on. Once the design was finalized, the reigns were handed over to me for creating the development plan. I lead development, acting as project manager for the dev team and doing code reviews. It was really validating to be entrusted with that responsibility for our company's own website.",
-    "image": "/grafton.webp",
-    "imageAlt": "The landing page of the Grafton Studio website.",
-    "url": "graftonstudio.com",
-    "href": "https://graftonstudio.com"
+    "highlights": "It's a great feeling when a client you've worked with in the past wants to work with you again! I used Google Charts for the first time on this project to create data visualizations for the client's research survey results. It was very challenging, but I can learn to do anything, and the result was that much more rewarding.",
+    "image": "/beyondbarriers.webp",
+    "imageAlt": "The landing page of the Beyond Barriers website.",
+    "url": "beyondbarriers.concernusa.org",
+    "href": "https://beyondbarriers.concernusa.org/"
   },
   {
     "name": "Kinetic Demolition",
     "type": "Website",
-    "year": "2024",
+    "year": "2023",
     "stack": "Astro, React components, Contentful CMS",
     "role": "Planner, Lead Developer",
+    "highlights": "This was the first project I took the lead on. Once the design was finalized, the reigns were handed over to me for creating the development plan. I lead development, acting as project manager for the dev team and doing code reviews. Being a relatively small site, this was the perfect first go at being lead developer.",
     "image": "/kineticdemo.webp",
     "imageAlt": "The landing page of the Kinetic Demolition website.",
     "url": "kineticdemo.com",
     "href": "https://www.kineticdemo.com/"
   },
   {
-    "name": "ACIR",
-    "type": "Website - Accessibility audit",
+    "name": "Grafton Studio",
+    "type": "Website",
     "year": "2024",
-    "role": "Accessibility specialist",
-    "highlights": "This site was first launched about 10 years ago and is in need of an accessibility overhaul. I was able to go through the whole site and create an audit report with remediation recommendations to get it into compliance with WCAG Level AA.",
-    "image": "/acir.webp",
-    "imageAlt": "The landing page of the ACIR website.",
-    "url": "acir.org",
-    "href": "https://acir.org/"
+    "stack": "Astro, React components, Storybook for component development and testing, Sanity CMS",
+    "role": "Planner, Lead Developer",
+    "highlights": "Right after I joined Grafton Studio in 2020, we launched a new “temporary” single-page site. Three years later, we finally had time to build ourselves a proper site! After proving myself on the Kinetic Demolition project, I was tapped again as lead developer. I took it as a huge vote of confidence that the whole team entrusted me with that responsibility for our company's own website. This was also my first time exploring Sanity CMS, and I loved it so much!",
+    "image": "/grafton.webp",
+    "imageAlt": "The landing page of the Grafton Studio website.",
+    "url": "graftonstudio.com",
+    "href": "https://graftonstudio.com"
   },
   {
     "name": "MyGiide",
@@ -82,16 +72,39 @@
     "href": "https://www.mygiide.com/"
   },
   {
-    "name": "Concern Worldwide USA - Beyond Barriers",
+    "name": "ACIR",
+    "type": "Website - Accessibility audit",
+    "year": "2024",
+    "role": "Accessibility specialist",
+    "highlights": "This site was first launched over 10 years ago and is in need of an accessibility overhaul. I was able to go through the whole site and create an audit report with remediation recommendations to get it into compliance with WCAG Level AA.",
+    "image": "/acir.webp",
+    "imageAlt": "The landing page of the ACIR website.",
+    "url": "acir.org",
+    "href": "https://acir.org/"
+  },
+  {
+    "name": "MIT AgeLab",
+    "type": "Website",
+    "year": "2021",
+    "stack": "11ty (Eleventy), Nunjucks, Netlify CMS",
+    "role": "Developer",
+    "highlights": "This might be an unpopular opinion, but I really like working with templating languages! Dr. Joe Coughlin is also an absolute delight of a person. I mean, just check out his incredible bow tie collection!",
+    "image": "/agelab.webp",
+    "imageAlt": "The landing page of the MIT age lab site.",
+    "url": "agelab.mit.edu",
+    "href": "https://agelab.mit.edu/"
+  },
+  {
+    "name": "MIT AgeLab - Mapping the Caregiver Journey",
     "type": "Website",
     "year": "2024",
-    "stack": "Astro, React components, Storybook for component development and testing, Google charts for data visualization, Netlify CMS",
-    "role": "Planner, Lead Developer",
-    "highlights": "It's a great feeling when a client you've worked with in the past wants to work with you again! I used Google Charts for the first time on this project to create data visualizations for the client's research survey results. It was very challenging, but I can learn to do anything, and the result was that much more rewarding.",
-    "image": "/beyondbarriers.webp",
-    "imageAlt": "The landing page of the Beyond Barriers website.",
-    "url": "beyondbarriers.concernusa.org",
-    "href": "https://beyondbarriers.concernusa.org/"
+    "stack": "11ty (Eleventy), Nunjucks, Netlify CMS",
+    "role": "Developer",
+    "highlights": "This project involved recreating an old archived site with important research for the Agelab. The original version of the site was composed largely of images and graphics as data visualizations, with no accessible alternative. Navigating the site with a screen reader felt like surfing mostly empty pages. I created markdown fields in the client's existing CMS so that I could organize all of the text and data from the image graphics into tables. This enabled me to render the data as visually-hidden HTML elements on the front end, vastly improving the site for any visually-impaired or non-sighted users.",
+    "image": "/caregiving.webp",
+    "imageAlt": "The landing page of the MIT age lab site.",
+    "url": "agelab-caregiving.mit.edu",
+    "href": "https://agelab-caregiving.mit.edu/"
   },
   {
     "name": "National NGO Program on Humanitarian Leadership",
