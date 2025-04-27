@@ -48,9 +48,19 @@ footer {
 }
 
 /* Resets */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 ul {
   list-style: none;
 }
+
+* {
+  line-height: calc(1em + 0.5rem); /* tysm Josh Comeau */
+}
+
+/* Styled components */
 a {
   color: var(--highlight-color-);
   font-weight: 600;
@@ -59,7 +69,6 @@ a:not(.button-link):hover {
   color: var(--highlight-color);
 }
 
-/* Styled components */
 a.button-link {
   height: min-content;
   text-decoration: none;
@@ -79,10 +88,12 @@ a.button-link:hover {
   box-shadow: 0 0 0 0 var(--highlight-color-);
 }
 
+/* General elements */
 h1, h2, h3 {
   font-family: "DynaPuff", sans-serif;
   font-weight: 600;
   color: var(--main-color-);
+  text-wrap: balance;
 }
 h1 {
   font-size: var(--px-to-rem-32);
@@ -101,7 +112,11 @@ h1 > span {
 
 p {
   max-width: 80ch;
-  line-height: 1.25;
+  text-wrap: pretty;
+}
+
+abbr {
+  text-decoration: none;
 }
 
 /* Utilities */
@@ -117,4 +132,15 @@ p {
   white-space: nowrap; 
   color: transparent;
   width: 1px; 
+}
+
+/* Mobile mode */
+@media (max-width: 789px) {
+  main {
+    padding: 1rem;
+  }
+
+  p {
+    max-width: 100%;
+  }
 }
