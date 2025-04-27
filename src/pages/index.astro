@@ -5,14 +5,18 @@ const currentPage = Astro.url.pathname;
 ---
 
 <Base>
-	<div>
-		<h1 aria-label="Hello! My name is Asha. I'm an endlessly curious frontend developer, committed to building accessible user interfaces and user experiences">
-			<span id="hello"><img src="/starburst.svg" alt="" aria-hidden="true"/><span>Hello! My name is</span> Asha.</span> <br/>
-			I'm an endlessly curious 
-			<span>frontend</span> dev, committed to building 
-			<span>accessible</span> 
-			<abbr title="user interfaces and user experiences">UI & UX</abbr> 
-			<img src="/starburst-small.svg" alt="" aria-hidden="true"/></h1>
+	<div id="intro-wrapper">
+		<h1>
+			<span class="visually-hidden">Hello! My name is Asha. I'm an endlessly curious front end developer, committed to building accessible user interfaces and user experiences</span>
+			<div aria-hidden="true">
+				<span id="hello"><img src="/starburst.svg" alt="" aria-hidden="true"/><span>Hello! My name is</span> Asha.</span> <br/>
+				I'm an endlessly curious 
+				<span>frontend</span> dev, committed to building 
+				<span>accessible</span> 
+				<abbr title="user interfaces and user experiences">UI & UX</abbr> 
+				<img src="/starburst-small.svg" alt="" aria-hidden="true"/>
+			</div>
+		</h1>
 	
 		<p>I have 5 years of experience on the front end, and I specialize in web accessibility.</p>
 	
@@ -38,7 +42,7 @@ const currentPage = Astro.url.pathname;
 					<span>Doodles</span> <img src="/doodles-home.svg" alt="" aria-hidden="true"/>
 				</a>
       </li>
-      <li class={currentPage == "/components" ? "active" : ""}>
+      {/* <li class={currentPage == "/components" ? "active" : ""}>
         <a aria-current={currentPage == "/components"} href="/components">
 					<span>Components</span> <img src="/components-home.svg" alt="" aria-hidden="true"/>
 				</a>
@@ -47,7 +51,7 @@ const currentPage = Astro.url.pathname;
         <a aria-current={currentPage == "/thoughts"} href="/thoughts">
 					<span>Thoughts</span> <img src="/thoughts-home.svg" alt="" aria-hidden="true"/>
 				</a>
-      </li>
+      </li> */}
     </ul>
   </nav>
 	
@@ -85,7 +89,7 @@ const currentPage = Astro.url.pathname;
 		float: right;
 	}
 
-	div {
+	div#intro-wrapper {
 		padding-left: 6rem;
 	}
 
