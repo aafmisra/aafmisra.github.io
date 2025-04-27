@@ -4,6 +4,8 @@ import Card from '../components/generic/Card.astro';
 ---
 <Base className="about">
   <section class="single-photo" aria-labelledby="main-heading">
+    <img src="/me.webp" srcset="/me.webp, /me-crop.webp 2x" alt="Asha smiling at a scenic overlook on the White Mountain Highway in North Conway, New Hampshire." />
+
     <Card fillMode>
       <h1 id="main-heading">Hi! I'm Asha 👋🏼</h1>
 
@@ -11,11 +13,12 @@ import Card from '../components/generic/Card.astro';
 
       <p>I'm currently seeking a new role where I can use my creativity and attention to detail to build software that enriches peoples' lives. I'm adept at CSS and I love a difficult design challenge such as a complex layout. My background in zoo & museum exhibit development gave me an invaluable developer skill — putting myself in the user's shoes. I apply this skill every day to make elegant, efficient, effective, and above all accessible products. <a href="mailto:aafmisra@gmail.com">Drop me a line if you'd like to work together!</a></p>
     </Card>
-  
-    <img src="/me.webp" srcset="/me.webp, /me-crop.webp 2x" alt="Asha smiling at a scenic overlook on the White Mountain Highway in North Conway, New Hampshire." />
   </section>
 
   <section class="double-photo" aria-labelledby="animals">
+    <img src="/public/amboseli.jpg" alt="Asha standing through the roof opening of a safari jeep looking at a herd of elephants in Amboseli National Park in Kenya." />
+    <img src="/public/salamander.jpg" alt="Asha in a green raincoat holding a yellow spotted salamander somewhere in Rhode Island." />
+
     <Card fillMode>
       <h2 id="animals">I'm a huge animal nerd</h2>
       
@@ -23,12 +26,12 @@ import Card from '../components/generic/Card.astro';
         I studied Wildlife and Conservation Biology, and had a career in zoo and museum education in a past life.
       </p>
     </Card>
-
-    <img src="/public/amboseli.jpg" alt="Asha standing through the roof opening of a safari jeep looking at a herd of elephants in Amboseli National Park in Kenya." />
-    <img src="/public/salamander.jpg" alt="Asha in a green raincoat holding a yellow spotted salamander somewhere in Rhode Island." />
   </section>
   
   <section class="double-photo" aria-labelledby="fiber-art">
+    <img src="/jolene.jpg" alt="A needle felted portrait of a scruffy black dog named Jolene on a blue background." />
+    <img src="/mobile.jpg" alt="A needle felted mobile for a baby's nursery. It has shooting stars, clouds, and sheep hanging from it." />
+
     <Card fillMode>
       <h2 id="fiber-art">I'm a self-taught fiber artist</h2>
       
@@ -36,12 +39,11 @@ import Card from '../components/generic/Card.astro';
         Knitting and needlefelting are some of my favorite ways to pass the time. Making things for people is my love language, and felted pet portraits and nursery mobiles are my favorite things to make. Check out my (rarely updated) <a target="_blank" href="https://www.instagram.com/heartfelt_fiber_art">instagram account</a>, and DM me there or <a href="mailto:aafmisra@gmail.com">send me an email</a> if you'd like to commission something!
       </p>
     </Card>
-
-    <img src="/jolene.jpg" alt="A needle felted portrait of a scruffy black dog named Jolene on a blue background." />
-    <img src="/mobile.jpg" alt="A needle felted mobile for a baby's nursery. It has shooting stars, clouds, and sheep hanging from it." />
   </section>
 
   <section class="single-photo" aria-labelledby="more-about-me">
+    <img src="/me-eyes-closed.webp" srcset="/me-eyes-closed.webp, /me-eyes-closed-crop.webp 2x" alt="Asha with her eyes closed smiling at a scenic overlook on the White Mountain Highway in North Conway, New Hampshire." />
+
     <Card fillMode>
       <h2 id="more-about-me">A bit more about me...</h2>
 
@@ -76,8 +78,6 @@ import Card from '../components/generic/Card.astro';
         </li>
       </ul>
     </Card>
-  
-    <img src="/me-eyes-closed.webp" srcset="/me-eyes-closed.webp, /me-eyes-closed-crop.webp 2x" alt="Asha with her eyes closed smiling at a scenic overlook on the White Mountain Highway in North Conway, New Hampshire." />
   </section>
 
 </Base>
@@ -98,6 +98,7 @@ import Card from '../components/generic/Card.astro';
     height: 100%;
     object-fit: cover;
     z-index: 1;
+    display: block;
 	}
 
   /* 2-photo sections */
@@ -159,9 +160,31 @@ import Card from '../components/generic/Card.astro';
 
   /* Mobile mode */
   @media (max-width: 769px) {
-    div > img {
-      height: 20rem;
+    section.single-photo, section.double-photo {
+      display: block;
     }
 
+    section > img {
+      height: 20rem;
+      position: sticky;
+      top: 0;
+    }
+    section.double-photo > img:last-of-type {
+      top: 20rem;
+    }
+
+    :global(main.about div.card) {
+      position: relative;
+    }
+
+    :global(main.about > section.single-photo:first-of-type div.card),
+    :global(main.about > section.single-photo:last-of-type div.card),
+    :global(main.about > section.double-photo div.card) {
+      margin: calc(var(--px-to-rem-24) * -1) var(--px-to-rem-16) var(--px-to-rem-48);
+    }
+
+    :global(main.about > section div.card ul) {
+      padding-inline-start: 16px;
+    }
   }
 </style>
