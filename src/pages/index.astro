@@ -11,8 +11,8 @@ const currentPage = Astro.url.pathname;
 			<div aria-hidden="true">
 				<span id="hello"><img src="/starburst.svg" alt="" aria-hidden="true"/><span>Hello! My name is</span> Asha.</span> <br/>
 				I'm an endlessly curious 
-				<span>frontend</span> dev, committed to building 
-				<span>accessible</span> 
+				<span class="highlight">frontend</span> dev, committed to building 
+				<span class="highlight">accessible</span> 
 				<abbr title="user interfaces and user experiences">UI & UX</abbr> 
 				<img src="/starburst-small.svg" alt="" aria-hidden="true"/>
 			</div>
@@ -58,6 +58,21 @@ const currentPage = Astro.url.pathname;
 </Base>
 
 <style>
+	h1 {
+		font-size: var(--px-to-rem-60);
+		max-width: 24ch;
+		position: relative;
+		font-weight: 400;
+	}
+	h1 img {
+		height: 4rem;
+		transform: rotate(18deg);
+		float: right;
+	}
+	h1 div span.highlight {
+		color: var(--highlight-color-);
+	}
+	
 	#hello {
 		font-family: DynaPuff;
 		font-size: var(--px-to-rem-56);
@@ -75,18 +90,6 @@ const currentPage = Astro.url.pathname;
 		position: absolute;
 		top: -2rem;
 		left: -5rem;
-	}
-
-	h1 {
-		font-size: var(--px-to-rem-60);
-		max-width: 24ch;
-		position: relative;
-		font-weight: 400;
-	}
-	h1 img {
-		height: 4rem;
-		transform: rotate(18deg);
-		float: right;
 	}
 
 	div#intro-wrapper {
