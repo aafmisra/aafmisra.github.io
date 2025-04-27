@@ -11,7 +11,7 @@ import Footer from "../components/global/Footer.astro";
 import "../styles/global.css";
 import "../styles/sizes.css";
 
-const { className = "" } = Astro.props;
+const { className = "", title } = Astro.props;
 ---
 
 <!doctype html>
@@ -21,7 +21,7 @@ const { className = "" } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Asha Misra</title>
+		<title>{title ? `${title} | Asha Misra` : "Asha Misra"}</title>
 
 		<!-- fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
