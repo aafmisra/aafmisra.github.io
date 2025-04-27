@@ -93,6 +93,8 @@ const currentPage = Astro.url.pathname;
 		gap: 1rem;
 		padding: 0 0 3rem 6rem;
 		margin: 2rem 0 0;
+		overflow-x: scroll;
+    scrollbar-width: none;
 	}
 	nav a {
 		text-decoration: none;
@@ -100,6 +102,7 @@ const currentPage = Astro.url.pathname;
 		flex-direction: column-reverse;
 		align-items: center;
 		height: 100%;
+    white-space: nowrap;
 	}
 	nav a:hover {
 		color: var(--highlight-color-); /* counteract global style */
@@ -113,25 +116,46 @@ const currentPage = Astro.url.pathname;
 	nav a:hover > img {
 		transform: translateY(-4px);
 	}
-	/* sizing for images */
+	/* sizing for icons */
 	nav a[href="/about"] > img {
 		height: 1.75rem;
-		/* margin-left: -2px; */
 	}
 	nav a[href="/components"] > img {
 		height: 1.25rem;
 		margin-bottom: 6px;
-		/* margin-left: 2px; */
 	}
 	nav a[href="/thoughts"] > img {
 		height: 1.75rem;
 	}
 	nav a[href="/doodles"] > img {
 		margin-bottom: 6px;
-		/* margin-left: 4px; */
 	}
 	nav a[href="/projects"] > img {
 		margin-bottom: 6px;
-		/* margin-left: 6px; */
+	}
+
+	/* Mobile mode */
+	@media (max-width: 769px) {
+		#hello > img {
+			transform: rotate(-18deg);
+			top: -5rem;
+			left: unset;
+		}
+
+		h1 {
+			font-size: var(--px-to-rem-48);
+		}
+		h1 img {
+			top: unset;
+		}
+
+		div {
+			padding-left: unset;
+		}
+
+		nav > ul {
+			padding-left: unset;
+			gap: 2.5rem;
+		}
 	}
 </style>
