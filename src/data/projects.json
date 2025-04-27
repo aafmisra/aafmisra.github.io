@@ -8,6 +8,97 @@
     "highlights": "This might be an unpopular opinion, but I really like working with templating languages!",
     "image": "/agelab.webp",
     "imageAlt": "The landing page of the MIT age lab site.",
-    "url": "https://agelab.mit.edu/"
+    "url": "agelab.mit.edu",
+    "href": "https://agelab.mit.edu/"
+  },
+  {
+    "name": "Neutrogena Skin360",
+    "type": "Web app",
+    "year": "2020 - 2025",
+    "stack": "current version: NextJS, React; previous versions: Web Components, React Native",
+    "role": "Developer, Accessibility specialist",
+    "highlights": "This was the first project I worked on as a brand new software developer, and I got to help see it through many iterations over the years, including a mobile app. I was also given audit reports from the Kenvue team in Canada (where there are stricter web accessibility standards) whenever small remediations were needed.",
+    "image": "/skin360.webp",
+    "imageAlt": "The landing page of the Neutrogena skin 360 web app.",
+    "url": "skin360.neutrogena.com",
+    "href": "https://skin360.neutrogena.com"
+  },
+  {
+    "name": "Concern Worldwide US",
+    "type": "Website",
+    "year": "2023",
+    "stack": "Astro, React components, Storybook for component development and testing, Netlify CMS",
+    "role": "Developer",
+    "highlights": "Working with a big global NGO felt really impactful.",
+    "image": "/skin360.webp",
+    "imageAlt": "The landing page of the Concern Worldwide US website.",
+    "url": "concernusa.org",
+    "href": "https://concernusa.org/"
+  },
+  {
+    "name": "Grafton Studio",
+    "type": "Website",
+    "year": "2023",
+    "stack": "Astro, React components, Storybook for component development and testing, Sanity CMS",
+    "role": "Planner, Lead Developer",
+    "highlights": "This was the first project I took the lead on. Once the design was finalized, the reigns were handed over to me for creating the development plan. I lead development, acting as project manager for the dev team and doing code reviews. It was really validating to be entrusted with that responsibility for our company's own website.",
+    "image": "/skin360.webp",
+    "imageAlt": "The landing page of the Grafton Studio website.",
+    "url": "graftonstudio.com",
+    "href": "https://graftonstudio.com"
+  },
+  {
+    "name": "Kinetic Demolition",
+    "type": "Website",
+    "year": "2024",
+    "stack": "Astro, React components, Contentful CMS",
+    "role": "Planner, Lead Developer",
+    "image": "/skin360.webp",
+    "imageAlt": "The landing page of the Kinetic Demolition website.",
+    "url": "kineticdemo.com",
+    "href": "https://www.kineticdemo.com/"
+  },
+  {
+    "name": "ACIR",
+    "type": "Website - Accessibility audit",
+    "year": "2024",
+    "role": "Accessibility specialist",
+    "highlights": "This site was first launched about 10 years ago and is in need of an accessibility overhaul. I was able to go through the whole site and create an audit report with remediation recommendations to get it into compliance with WCAG Level AA.",
+    "image": "/skin360.webp",
+    "imageAlt": "The landing page of the ACIR website.",
+    "url": "acir.org",
+    "href": "https://acir.org/"
+  },
+  {
+    "name": "MyGiide",
+    "type": "Web app",
+    "year": "2021 - 2024",
+    "stack": "Web Components, MongoDB, Python",
+    "role": "Developer, Accessibility specialists",
+    "highlights": "This was the second project of my professional developer career, and I got to revisit it last year for accessibility remediations. The client had a very exciting opportunity to partner with a public university where this app would be used in classrooms. I was given an accessibility audit report done by a third party, did all the necessary remediation to get the app compliant with Section 508, and drafted a Voluntary Product Accessibility Template for the client. My remediation work was essential to their ability to sign a lucrative deal with the university. It was so fulfilling to do this work knowing it would improve the experience of using the app for all of the students. It was also very cool to see how much I had learned about web accessibility in the 3 years since the app was first launched!",
+    "image": "/skin360.webp",
+    "imageAlt": "The landing page of the MyGiide web app.",
+    "url": "mygiide.com",
+    "href": "https://www.mygiide.com/"
+  },
+  {
+    "name": "Concern Worldwide USA - Beyond Barriers",
+    "type": "Website",
+    "year": "2024",
+    "stack": "Astro, React components, Storybook for component development and testing, Google charts for data visualization, Netlify CMS",
+    "role": "Planner, Lead Developer",
+    "highlights": "It's a great feeling when a client you've worked with in the past wants to work with you again! I used Google Charts for the first time on this project to create data visualizations for the client's research survey results. It was very challenging, but I can learn to do anything, and the result was that much more rewarding.",
+    "image": "/skin360.webp",
+    "imageAlt": "The landing page of the Beyond Barriers website.",
+    "url": "beyondbarriers.concernusa.org",
+    "href": "https://beyondbarriers.concernusa.org/"
+  },
+  {
+    "name": "National NGO Program on Humanitarian Leadership",
+    "type": "Website in progress",
+    "year": "2024 - 2025",
+    "stack": "Astro, React components, Storybook for component development and testing, Netlify CMS",
+    "role": "Planner, Lead Developer",
+    "highlights": "This site has a really cool design with several challenging layouts, which is my favorite type of challenge to tackle. I'd love to show them off, but this project is unfortunately on hold, as much of the funding for the program came from USAID."
   }
 ]
