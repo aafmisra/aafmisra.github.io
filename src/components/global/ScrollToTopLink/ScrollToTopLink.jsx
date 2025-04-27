@@ -141,6 +141,7 @@ const ScrollToTopLink = () => {
         id="scroll-to-top-link"
         onClick={scrollToTop}
         ref={ref}
+        tabIndex="0"
     >
       <img
         src="/up.svg"
