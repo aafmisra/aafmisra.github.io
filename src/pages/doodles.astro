@@ -11,9 +11,29 @@ import ColorSwitches from '../components/doodles/ColorSwitches.astro';
 	<h1>Just messin' around</h1>
 
 	<p>I learn best by doing, so I prefer to jump straight into a new technology or technique and learn as I go. These doodles are the result of that strategy.</p>
+	<p>Nothing here is perfect or polished, but that's kinda the point! ✨</p>
 
 	<ul aria-label="Doodles">
-		<li>
+		<li id="sunrise">
+			<Card>
+				<h2>SVG Sunrise</h2>
+				<figure>
+					<figcaption class="caption">I made this to learn about SVG animation. Hopefully SMIL is here to stay!</figcaption>
+					<Sunrise/>
+				</figure>
+			</Card>
+		</li>
+		
+		<li id="chameleons">
+			<Card>
+				<h2>Chameleon Camouflage</h2>
+				<p class="caption">I made this to learn about CSS transitions and animations. Click the chameleon's background to see him change!</p>
+				<p class="caption">P.S. - if you're on mobile, change the scale to 0.5x and click the background close to his body</p>
+				<Chameleon/>
+			</Card>
+		</li>
+
+		<li id="colors">
 			<Card>
 				<h2>Color Switches</h2>
 				<p class="caption">I made this when I first started learning JavaScript to figure out how event propagation works. I included it here because I'm indecisive about color schemes.</p>
@@ -22,7 +42,7 @@ import ColorSwitches from '../components/doodles/ColorSwitches.astro';
 			</Card>
 		</li>
 
-		<li>
+		<li id="clowns">
 			<Card>
 				<figure>
 					<h2>Comic-Tabs-MS &#129313;</h2>
@@ -32,25 +52,7 @@ import ColorSwitches from '../components/doodles/ColorSwitches.astro';
 			</Card>
 		</li>
 
-		<li>
-			<Card>
-				<h2>Chameleon Camouflage</h2>
-				<p class="caption">I made this to learn about CSS transitions and animations. Click the chameleon's background to see him change!</p>
-				<Chameleon/>
-			</Card>
-		</li>
-
-		<li>
-			<Card>
-				<h2>SVG Sunrise</h2>
-				<figure>
-					<figcaption class="caption">I made this to learn about SVG animation. Hopefully SMIL is here to stay!</figcaption>
-					<Sunrise/>
-				</figure>
-			</Card>
-		</li>
-
-		<li>
+		<li id="breathe">
 			<Card>
 				<figure>
 					<h2>Box Breathe</h2>
@@ -66,11 +68,8 @@ import ColorSwitches from '../components/doodles/ColorSwitches.astro';
 
 <style>
 	ul {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		align-items: stretch;
-		gap: var(--px-to-rem-32);
+		column-count: 2;
+		column-gap: var(--px-to-rem-32);
 		max-width: 100%;
 		padding: 0;
 	}
@@ -86,7 +85,7 @@ import ColorSwitches from '../components/doodles/ColorSwitches.astro';
 	}
 
 	li {
-		width: calc(50% - var(--px-to-rem-16));
+		margin-bottom: var(--px-to-rem-32);
 
 		img {
 			max-width: 100%;
@@ -101,7 +100,11 @@ import ColorSwitches from '../components/doodles/ColorSwitches.astro';
 		}
 	}
 
-	@media (max-width: 769px) {
+	@media (max-width: 900px) {
+		ul {
+			column-count: unset;
+			gap: var(--px-to-rem-16);
+		}
 		li {
 			width: 100%;
 		}
