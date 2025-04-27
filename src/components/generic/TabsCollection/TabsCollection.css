@@ -1,0 +1,48 @@
+/* components/Generics/TabsCollection/TabsCollection.css - Styles for <TabsCollection> component. */
+
+/* Component wrapper */
+div.tab-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Tab components wrapper */
+div[role="tablist"] {
+  width: min-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: var(--px-to-rem-48);
+  pointer-events: none;
+}
+
+/* Mobile mode */
+@media (max-width: 900px) {
+  /* Tab components wrapper */
+  div[role="tablist"] {
+    column-gap: unset;
+    overflow-x: scroll;
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
+  }
+  div[role="tablist"]::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Point at which tabs change justification to facilitate horizontal scrolling to off-screen tabs */
+@media (max-width: 600px) {
+  /* Tab components wrapper */
+  div[role="tablist"] {
+    justify-content: flex-start;
+  }
+}
+
+/* Very small mobile devices */
+@media (max-width: 353px) {
+  div.tab-group {
+    margin-top: unset;
+  }
+}

@@ -1,0 +1,30 @@
+button.tab {
+  border: none;
+  transition: all .2s ease-in-out;
+  cursor: pointer;
+  pointer-events: auto;
+  height: var(--px-to-rem-48);
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  padding-bottom: var(--px-to-rem-16);
+  color: var(--main-color-);
+  font-weight: 700;
+  font-size: var(--px-to-rem-24);
+  margin-left: auto;
+  margin-right: auto;
+  text-transform: capitalize;
+  transition: color, text-decoration .2s ease-in-out;
+  font-family: var(--main-font);
+}
+
+/* hover state */
+button.tab:hover {
+  text-decoration: overline;
+}
+
+/* active tab */
+button.tab[aria-selected="true"] {
+  color: var(--highlight-color-);
+  text-decoration: underline;
+}

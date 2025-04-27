@@ -1,0 +1,19 @@
+/* components/Generics/TabPanel/TabPanel.css - Styles for <TabPanel> component. */
+
+/* Panels corresponding to inactive tabs/default state */
+div[role="tabpanel"] {
+  width: 100%;
+  display: none;
+}
+
+/* Panel corresponding to active tab */
+div[role="tabpanel"].active {
+  display: flex;
+  flex-direction: column;
+}
+@media (prefers-reduced-motion: no-preference) {
+  div[role="tabpanel"].active {
+    animation: appear-on-load 0.2s ease-in-out;
+    animation-iteration-count: 1;
+  }
+}

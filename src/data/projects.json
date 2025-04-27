@@ -69,7 +69,8 @@
     "image": "/mygiide.webp",
     "imageAlt": "The compare yourself to others page of the MyGiide web app.",
     "url": "mygiide.com",
-    "href": "https://www.mygiide.com/"
+    "href": "https://www.mygiide.com/",
+    "accessibilityFocused": true
   },
   {
     "name": "ACIR",
@@ -80,7 +81,8 @@
     "image": "/acir.webp",
     "imageAlt": "The landing page of the ACIR website.",
     "url": "acir.org",
-    "href": "https://acir.org/"
+    "href": "https://acir.org/",
+    "accessibilityFocused": true
   },
   {
     "name": "MIT AgeLab",
@@ -104,7 +106,8 @@
     "image": "/caregiving.webp",
     "imageAlt": "The landing page of the MIT age lab site.",
     "url": "agelab-caregiving.mit.edu",
-    "href": "https://agelab-caregiving.mit.edu/"
+    "href": "https://agelab-caregiving.mit.edu/",
+    "accessibilityFocused": true
   },
   {
     "name": "National NGO Program on Humanitarian Leadership",

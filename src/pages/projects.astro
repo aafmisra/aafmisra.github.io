@@ -1,9 +1,28 @@
 ---
 import Base from '../layouts/Base.astro';
 import Card from '../components/generic/Card.astro';
+import TabsCollection from '../components/generic/TabsCollection/TabsCollection';
+import TabPanel from '../components/generic/TabPanel/TabPanel';
 
 // Projects data
 import projects from "../data/projects.json";
+
+// Build tabs prop for TabsCollection
+const tabs = [
+  {
+    tabId: "all-tab",
+    panelId: "all-panel",
+    copy: "All",
+  },
+  {
+    tabId: "accessibility-tab",
+    panelId: "accessibility-panel",
+    copy: "Accessibility",
+  },
+];
+
+// Sort tabs
+const accessibilityProjects = projects.filter(project => project.accessibilityFocused);
 ---
 
 <Base className="projects" title="projects">
@@ -11,50 +30,103 @@ import projects from "../data/projects.json";
 
 	<p>Working at a web development and design agency for 5 years, I was fortunate to work on projects for clients from a diverse list of industries. Whether it was education, engineering, cosmetics, NGOs tackling global poverty, or organizations dedicated to curing cancer, I thoroughly enjoyed getting to be a part of each and every one of these projects. I contributed a significant amount of production code to all of these sites and apps, and lead development on some of them.</p>
 
-	<ul aria-label="Projects">
-		{
-			projects.map((project) => {
-				return (
-					<li>
-						<h2>{project.name}</h2>
-						<div>
-							{
-								project.image &&
-								<Card><img src={project.image} alt={project.imageAlt}/></Card>
-							}
-							<dl>
-								<dt>Project Type</dt>
-								<dd>{project.type}</dd>
+	<TabsCollection tabs={tabs} client:only="react">
+		<TabPanel tabId="all-tab" panelId="all-panel" client:only="react">
+			<ul aria-label="All Projects">
+				{
+					projects.map((project) => {
+						return (
+							<li>
+								<h2>{project.name}</h2>
+								<div>
+									{
+										project.image &&
+										<Card><img src={project.image} alt={project.imageAlt}/></Card>
+									}
+									<dl>
+										<dt>Project Type</dt>
+										<dd>{project.type}</dd>
+		
+										{
+											project.url &&
+											<dt>URL</dt>
+											<dd><a href={project.href} target="_blank">{project.url}</a></dd>
+										}
+					
+										<dt>Year</dt>
+										<dd>{project.year}</dd>
+		
+										{ project.stack &&
+											<dt>Stack</dt>
+											<dd>{project.stack}</dd>
+										}
+					
+										<dt>Role</dt>
+										<dd>{project.role}</dd>
+		
+										{
+											project.highlights &&
+											<dt>Highlights</dt>
+											<dd>{project.highlights}</dd>
+										}
+									</dl>
+								</div>
+							</li>
+						);
+					})
+				}
+			</ul>
+		</TabPanel>
 
-								{
-									project.url &&
-									<dt>URL</dt>
-									<dd><a href={project.href} target="_blank">{project.url}</a></dd>
-								}
-			
-								<dt>Year</dt>
-								<dd>{project.year}</dd>
+		<TabPanel tabId="accessibility-tab" panelId="accessibility-panel" client:only="react">
+			<p>While I did accessibility-related work for every project I contributed to, these ones were particularly accessibility-focused.</p>
+			<ul aria-label="Accessibility Projects">
+				{
+					accessibilityProjects.map((project) => {
+						return (
+							<li>
+								<h2>{project.name}</h2>
+								<div>
+									{
+										project.image &&
+										<Card><img src={project.image} alt={project.imageAlt}/></Card>
+									}
+									<dl>
+										<dt>Project Type</dt>
+										<dd>{project.type}</dd>
+		
+										{
+											project.url &&
+											<dt>URL</dt>
+											<dd><a href={project.href} target="_blank">{project.url}</a></dd>
+										}
+					
+										<dt>Year</dt>
+										<dd>{project.year}</dd>
+		
+										{ project.stack &&
+											<dt>Stack</dt>
+											<dd>{project.stack}</dd>
+										}
+					
+										<dt>Role</dt>
+										<dd>{project.role}</dd>
+		
+										{
+											project.highlights &&
+											<dt>Highlights</dt>
+											<dd>{project.highlights}</dd>
+										}
+									</dl>
+								</div>
+							</li>
+						);
+					})
+				}
+			</ul>
+		</TabPanel>
+	</TabsCollection>
 
-								{ project.stack &&
-									<dt>Stack</dt>
-									<dd>{project.stack}</dd>
-								}
-			
-								<dt>Role</dt>
-								<dd>{project.role}</dd>
-
-								{
-									project.highlights &&
-									<dt>Highlights</dt>
-									<dd>{project.highlights}</dd>
-								}
-							</dl>
-						</div>
-					</li>
-				);
-			})
-		}
-	</ul>
 </Base>
 
 <style>
