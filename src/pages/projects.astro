@@ -43,7 +43,7 @@ const accessibilityProjects = projects.filter(project => project.accessibilityFo
 										project.image &&
 										<Card><img src={project.image} alt={project.imageAlt}/></Card>
 									}
-									<dl>
+									<dl aria-label="Project specifications.">
 										<dt>Project Type</dt>
 										<dd>{project.type}</dd>
 		
