@@ -6,6 +6,7 @@
 // Components
 import Header from "../components/global/Header.astro";
 import Footer from "../components/global/Footer.astro";
+import ScrollToTopLink from "../components/global/ScrollToTopLink/ScrollToTopLink.jsx"
 
 // CSS
 import "../styles/global.css";
@@ -20,8 +21,11 @@ const { className = "", title } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
 		<title>{title ? `${title} | Asha Misra` : "Asha Misra"}</title>
+		
+		<meta property="og:title" content={title ? `${title} | Asha Misra` : "Asha Misra"} />
+    <meta property="og:image" content="/me-crop.webp" />
+    <meta property="og:description" content="Hi! I'm Asha - an accessibility-focused front end developer." />
 
 		<!-- fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,6 +37,7 @@ const { className = "", title } = Astro.props;
 
 		<main id="main-content" class={className}>
 			<slot />
+			<ScrollToTopLink client:load />
 		</main>
 
 		<Footer/>

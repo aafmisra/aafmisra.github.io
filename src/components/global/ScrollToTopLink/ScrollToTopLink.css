@@ -1,0 +1,18 @@
+a#scroll-to-top-link {
+  display: block;
+  width: var(--px-to-rem-48);
+  height: var(--px-to-rem-48);
+  position: fixed;
+  bottom: var(--px-to-rem-16);
+  right: var(--px-to-rem-16);
+  z-index: 3;
+}
+
+a#scroll-to-top-link > img {
+  height: 100%;
+  width: 100%;
+}
+
+a#scroll-to-top-link.hidden {
+  display: none;
+}
