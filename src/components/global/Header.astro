@@ -56,41 +56,41 @@ const thoughtsActive = currentPage === "/thoughts";
     gap: 1rem;
     background-color: var(--contrast-dark-color);
   }
-
-  header.home {
-    background-color: var(--main-color);
-  }
-
-  header.home > nav,
-  header.home > div > a:first-of-type {
-    display: none;
-  }
-
-  header.home > div {
-    justify-content: flex-end;
-  }
-
+  
   header > div {
     width: 100%;
     display: flex;
     justify-content: space-between;
   }
-
+  
   header > div img {
     height: 3rem;
   }
-
+  
   header a {
     text-decoration: none;
   }
-
+  
   header > nav > ul {
     width: 100%;
     display: flex;
     padding: 0 0 0 1rem;
     margin: 0;
     overflow-x: scroll;
+    scrollbar-width: none;
   } 
+
+  /* Homepage version of the header */
+  header.home {
+    background-color: var(--main-color);
+  }
+  header.home > nav,
+  header.home > div > a:first-of-type {
+    display: none;
+  }
+  header.home > div {
+    justify-content: flex-end;
+  }
 
   /* Skip to main content link */
   a#skip-link {
@@ -109,23 +109,19 @@ const thoughtsActive = currentPage === "/thoughts";
     transition: top 0 linear; /* Default transition: allow transition-delay for users who prefer reduced motion */
     transition-delay: 2s;
   }
-  
   a#skip-link:focus {
     top: 0;
     transition: unset;
   }
-  
   a#skip-link:focus:not(:focus-visible) {
     top: calc(var(--px-to-rem-50) * -1);
   }
-  
   @media (prefers-reduced-motion: no-preference) {
     a#skip-link {
       transition: top 0.25s ease-in-out;
       transition-delay: 2s;
     }
   }
-  
   /* Mobile mode */
   @media (max-width: 900px) {
     a#skip-link {
@@ -137,7 +133,6 @@ const thoughtsActive = currentPage === "/thoughts";
   /* overlapping tabs */
   nav li {
     display: inline-block;
-    border-bottom: 1px solid var(--main-color-);
     margin-left: -20px;
   }
 
@@ -193,7 +188,7 @@ const thoughtsActive = currentPage === "/thoughts";
     margin-bottom: -4px;
   }
 
-  /* LI ACTIVE  */
+  /* active tabs  */
 
   nav li.active {
     border-bottom: 1px solid var(--main-color);
@@ -209,6 +204,6 @@ const thoughtsActive = currentPage === "/thoughts";
   }
 
   nav li.active a:after {
-    border-bottom: 1px solid var(--main-color);
+    border-bottom: 2px solid var(--main-color);
   }
 </style>

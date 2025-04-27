@@ -1,0 +1,13 @@
+[
+  {
+    "name": "MIT AgeLab",
+    "type": "Website",
+    "year": "2021",
+    "stack": "11ty (Eleventy), Nunjucks, Netlify CMS",
+    "role": "Developer",
+    "highlights": "This might be an unpopular opinion, but I really like working with templating languages!",
+    "image": "/agelab.webp",
+    "imageAlt": "The landing page of the MIT age lab site.",
+    "url": "https://agelab.mit.edu/"
+  }
+]
