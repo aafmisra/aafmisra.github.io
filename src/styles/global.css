@@ -24,7 +24,7 @@ body {
 body {
   display: flex;
   flex-direction: column;
-  font-family: "Sono", sans-serif;
+  font-family: "Atkinson Hyperlegible", monospace;
   font-weight: 200;
   animation: appear-on-load 0.5s ease-in-out;
   animation-iteration-count: 1;
@@ -63,6 +63,7 @@ ul {
 a {
   color: var(--highlight-color-);
   font-weight: 600;
+  font-family: "Sono", monospace;
 }
 a:not(.button-link):hover {
   color: var(--highlight-color);
