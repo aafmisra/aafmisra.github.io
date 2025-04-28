@@ -2,9 +2,9 @@ a#scroll-to-top-link {
   display: block;
   width: var(--px-to-rem-48);
   height: var(--px-to-rem-48);
-  position: fixed;
+  position: sticky;
   bottom: var(--px-to-rem-16);
-  right: var(--px-to-rem-16);
+  left: 100%;
   z-index: 3;
 }
 
