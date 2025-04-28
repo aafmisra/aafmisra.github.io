@@ -27,6 +27,12 @@ const className = currentPage === "/" ? "home" : "";
             >Resume</a
           >
         </li>
+
+        <li>
+          <a href="Asha_Misra_resume_print.pdf" download aria-label="Download the printer-friendly version of my resume."
+            >Resume (less cute, more printable)</a
+          >
+        </li>
       </ul>
     </nav>
   </div>
@@ -54,6 +60,12 @@ const className = currentPage === "/" ? "home" : "";
   p {
     color: var(--main-color-);
     margin: 0;
+  }
+
+  li {
+    max-width: 12ch;
+    word-break: break-word;
+    text-align: right;
   }
 
   /* Mobile mode */
