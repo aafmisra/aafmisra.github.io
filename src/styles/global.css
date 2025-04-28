@@ -90,12 +90,13 @@ a.button-link:hover {
 
 /* General elements */
 h1, h2, h3 {
-  font-family: "DynaPuff", sans-serif;
+  font-family: "Atkinson Hyperlegible", monospace;
   font-weight: 600;
   color: var(--main-color-);
   text-wrap: balance;
 }
 h1 {
+  font-family: "DynaPuff", sans-serif;
   font-size: var(--px-to-rem-32);
 }
 h2 {
