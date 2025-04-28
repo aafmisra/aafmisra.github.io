@@ -3,11 +3,11 @@ const currentPage = Astro.url.pathname;
 
 const className = currentPage === "/" ? "home" : "";
 
-const aboutActive = currentPage === "/about";
-const projectsActive = currentPage === "/projects";
-const doodlesActive = currentPage === "/doodles";
-const componentsActive = currentPage === "/components";
-const thoughtsActive = currentPage === "/thoughts";
+const aboutActive = currentPage === "/about/";
+const projectsActive = currentPage === "/projects/";
+const doodlesActive = currentPage === "/doodles/";
+const componentsActive = currentPage === "/components/";
+const thoughtsActive = currentPage === "/thoughts/";
 ---
 
 <header class={className}>
