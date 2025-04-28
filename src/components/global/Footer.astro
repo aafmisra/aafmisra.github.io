@@ -5,38 +5,46 @@ const className = currentPage === "/" ? "home" : "";
 ---
 
 <footer class={className}>
-  <p>
-    Made with &hearts; by Asha Misra ©2025
-  </p>
-
-  <nav aria-label="Find me elsewhere.">
-    <ul>
-      <li>
-        <a href="https://www.linkedin.com/in/asha-misra/" target="_blank"
-          >LinkedIn</a
-        >
-      </li>
-
-      <li>
-        <a href="https://github.com/aafmisra" target="_blank">GitHub</a>
-      </li>
-
-      <li>
-        <a href="Asha_Misra_resume.pdf" download aria-label="Download my resume."
-          >Resume</a
-        >
-      </li>
-    </ul>
-  </nav>
+  <div id="inner-footer">
+    <p>
+      Made with &hearts; by Asha Misra ©2025
+    </p>
+  
+    <nav aria-label="Find me elsewhere.">
+      <ul>
+        <li>
+          <a href="https://www.linkedin.com/in/asha-misra/" target="_blank"
+            >LinkedIn</a
+          >
+        </li>
+  
+        <li>
+          <a href="https://github.com/aafmisra" target="_blank">GitHub</a>
+        </li>
+  
+        <li>
+          <a href="Asha_Misra_resume.pdf" download aria-label="Download my resume."
+            >Resume</a
+          >
+        </li>
+      </ul>
+    </nav>
+  </div>
 </footer>
 
 <style>
   footer {
-    display: flex;
-    justify-content: space-between;
+    width: 100%;
     padding: 1rem 2rem;
     font-size: var(--px-to-rem-16);
     border-top: 6px dotted var(--highlight-color-);
+  }
+
+  footer > div#inner-footer {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1600px;
+    margin: 0 auto;
   }
   
   footer.home {

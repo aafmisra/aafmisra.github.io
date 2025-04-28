@@ -11,60 +11,69 @@ const thoughtsActive = currentPage === "/thoughts";
 ---
 
 <header class={className}>
-  <a href="#main-content" id="skip-link">Skip to main content</a>
-  <div>
-    <a href="/" title="home"><img src="/favicon.svg" alt="" aria-hidden="true"/><span class="visually-hidden">go to the home page</span></a>
-    <a class="button-link" href="mailto:aafmisra@gmail.com">Say Hi</a>
+  <div id="inner-header">
+    <a href="#main-content" id="skip-link">Skip to main content</a>
+    <div id="links-wrapper">
+      <a href="/" title="home"><img src="/favicon.svg" alt="" aria-hidden="true"/><span class="visually-hidden">go to the home page</span></a>
+      <a class="button-link" href="mailto:aafmisra@gmail.com">Say Hi</a>
+    </div>
+  
+    <nav aria-label="Primary">
+      <ul>
+        <li class={aboutActive ? "active" : ""}>
+          <a aria-current={aboutActive} href="/about">
+            <span>About Me <img src={`/about-${aboutActive ? "active" : "inactive"}.svg`} alt="" aria-hidden="true"/></span>
+          </a>
+        </li>
+        <li class={projectsActive ? "active" : ""}>
+          <a aria-current={projectsActive} href="/projects">
+            <span>Projects <img src={`/projects-${projectsActive ? "active" : "inactive"}.svg`} alt="" aria-hidden="true"/></span>
+          </a>
+        </li>
+        <li class={doodlesActive ? "active" : ""}>
+          <a aria-current={doodlesActive} href="/doodles">
+            <span>Doodles <img src={`/doodles-${doodlesActive ? "active" : "inactive"}.svg`} alt="" aria-hidden="true"/></span>
+          </a>
+        </li>
+        {/* <li class={componentsActive ? "active" : ""}>
+          <a aria-current={componentsActive} href="/components">
+            <span>Components <img src={`/components-${componentsActive ? "active" : "inactive"}.svg`} alt="" aria-hidden="true"/></span>
+          </a>
+        </li>
+        <li class={thoughtsActive ? "active" : ""}>
+          <a aria-current={thoughtsActive} href="/thoughts">
+            <span>Thoughts <img src={`/thoughts-${thoughtsActive ? "active" : "inactive"}.svg`} alt="" aria-hidden="true"/></span>
+          </a>
+        </li> */}
+      </ul>
+    </nav>
   </div>
-
-  <nav aria-label="Primary">
-    <ul>
-      <li class={aboutActive ? "active" : ""}>
-        <a aria-current={aboutActive} href="/about">
-					<span>About Me <img src={`/about-${aboutActive ? "active" : "inactive"}.svg`} alt="" aria-hidden="true"/></span>
-				</a>
-      </li>
-      <li class={projectsActive ? "active" : ""}>
-        <a aria-current={projectsActive} href="/projects">
-					<span>Projects <img src={`/projects-${projectsActive ? "active" : "inactive"}.svg`} alt="" aria-hidden="true"/></span>
-				</a>
-      </li>
-      <li class={doodlesActive ? "active" : ""}>
-        <a aria-current={doodlesActive} href="/doodles">
-					<span>Doodles <img src={`/doodles-${doodlesActive ? "active" : "inactive"}.svg`} alt="" aria-hidden="true"/></span>
-				</a>
-      </li>
-      {/* <li class={componentsActive ? "active" : ""}>
-        <a aria-current={componentsActive} href="/components">
-					<span>Components <img src={`/components-${componentsActive ? "active" : "inactive"}.svg`} alt="" aria-hidden="true"/></span>
-				</a>
-      </li>
-      <li class={thoughtsActive ? "active" : ""}>
-        <a aria-current={thoughtsActive} href="/thoughts">
-					<span>Thoughts <img src={`/thoughts-${thoughtsActive ? "active" : "inactive"}.svg`} alt="" aria-hidden="true"/></span>
-				</a>
-      </li> */}
-    </ul>
-  </nav>
 </header>
 
 <style>
   header {
     padding: 1rem 0 0;
+    background-color: var(--contrast-dark-color);
+    width: 100%;
+  }
+  
+  header > div#inner-header {
+    max-width: 1600px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    background-color: var(--contrast-dark-color);
-  }
-  
-  header > div {
-    width: 100%;
-    display: flex;
     justify-content: space-between;
     padding: 0 1rem;
   }
+
+  header div#links-wrapper {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+  }
   
-  header > div img {
+  header div#links-wrapper img {
     height: 3rem;
     transform: rotate(18deg);
   }
@@ -73,7 +82,7 @@ const thoughtsActive = currentPage === "/thoughts";
     text-decoration: none;
   }
   
-  header > nav > ul {
+   nav > ul {
     width: 100%;
     display: flex;
     padding: 0 0 0 1rem;
@@ -86,11 +95,11 @@ const thoughtsActive = currentPage === "/thoughts";
   header.home {
     background-color: var(--main-color);
   }
-  header.home > nav,
-  header.home > div > a:first-of-type {
+  header.home nav,
+  header.home div#links-wrapper > a:first-of-type {
     display: none;
   }
-  header.home > div {
+  header.home div#links-wrapper {
     justify-content: flex-end;
   }
 

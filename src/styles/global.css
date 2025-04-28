@@ -26,11 +26,12 @@ body {
   flex-direction: column;
   font-family: "Sono", sans-serif;
   font-weight: 200;
-  max-width: 1600px;
   animation: appear-on-load 0.5s ease-in-out;
   animation-iteration-count: 1;
 }
 main {
+  max-width: 1600px;
+  margin: 0 auto;
   flex: 1 0 auto;
   padding: 1rem 2rem;
   color: var(--contrast-light-color);
