@@ -15,7 +15,7 @@ button.tab {
   margin-right: auto;
   text-transform: capitalize;
   transition: color, text-decoration .2s ease-in-out;
-  font-family: var(--main-font);
+  font-family: "Sono", monospace;
 }
 
 /* hover state */
